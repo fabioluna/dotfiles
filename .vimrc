@@ -34,16 +34,63 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" UI -> NERDTree
+Plugin 'jistr/vim-nerdtree-tabs'
 
 "Syntax and code
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'valloric/youcompleteme'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'tmhedberg/SimpylFold'
+
+" Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Python -> Flake8
+Plugin 'nvie/vim-flake8'
+let python_highlight_all=1
+syntax on
+
+Plugin 'vim-scripts/indentpython.vim'
+
+" Python -> Auto Complete
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"Python -> virtualenv support
+py3 << EOF
+import os
+import sys
+
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+" Frontend
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
 
 " Others
 Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,7 +111,15 @@ filetype plugin indent on    " required
 set encoding=UTF-8
 set number
 set numberwidth=3
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+set clipboard=unnamed
+"highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+if ( $TERM == "xterm-256color" || $TERM == "screen-256color" )
+	set t_Co=256
+
+	" Enable powerline too, since we can.
+	set rtp+=/usr/share/powerline/bindings/vim/
+endif
 
 :imap <C-h> <C-o>h
 :imap <C-j> <C-o>j
@@ -89,3 +144,17 @@ let g:airline#extensions#ale#warning_symbol = 'W:'
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+

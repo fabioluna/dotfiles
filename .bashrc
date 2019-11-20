@@ -161,4 +161,13 @@ unset color_prompt force_color_prompt
 #if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 #    source /usr/share/powerline/bindings/bash/powerline.sh
 #fi
+source ~/.fonts/*.sh
 alias config='/usr/bin/git --git-dir=/home/fabio/.cfg/ --work-tree=/home/fabio'
+export PATH="$PATH:/usr/local/bin/composer"
+
+# Visual Apps
+export GDK_THEME=Emacs
+export DISPLAY=172.28.160.1:0.0
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+
+# source ${HOME}/.powerline-2column.bash
