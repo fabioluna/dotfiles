@@ -1,7 +1,8 @@
 # Odoo
 alias cdodoo11='cd /home/fabio/projects/odoo11/odoo'
 alias run11='odoo11 && cd /home/fabio/projects/odoo11/odoo && ./odoo-bin -c odoo-config'
-alias run12='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config'
+alias porter='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-porter'
+alias trust='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-trust'
 alias run13='odoo13 && cd /home/fabio/projects/odoo13/odoo && ./odoo-bin -c odoo-config'
 alias odooshell11='odoo11 && cd /home/fabio/projects/odoo11/odoo && ./odoo-bin shell -c odoo-config -d'
 alias odooshell12='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin shell -c odoo-config -d'
@@ -28,3 +29,6 @@ alias service='sudo service'
 alias kill='sudo kill -9'
 alias killall='sudo killall -9'
 
+# Vim 
+alias vim='vim.gtk'
+alias vims='cd ~/.vim/sessions/ && vim -S'
