@@ -16,6 +16,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
+" Language Spelling Tools
+Plugin 'rhysd/vim-grammarous'
+
 
 " GIT
 Plugin 'tpope/vim-fugitive'
@@ -25,14 +28,17 @@ Plugin 'airblade/vim-gitgutter'
 " UI
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " UI -> NERDTree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapOpenInTab='<ENTER>'
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
 
 " UI -> Airline
 Plugin 'vim-airline/vim-airline'
@@ -43,6 +49,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol = 'E:'
 let g:airline#extensions#ale#warning_symbol = 'W:'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#capslock#enabled = 1
 
 
 "Syntax and code
@@ -73,6 +80,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 "Plugin 'vim-scripts/indentpython.vim'
 Plugin 'roxma/python-support.nvim'
+Plugin 'heavenshell/vim-pydocstring'
 
 " Python -> Flake8
 Plugin 'nvie/vim-flake8'
@@ -121,13 +129,17 @@ EOF
 Plugin 'psf/black'
 nnoremap <F9> :Black<CR>
 let g:black_linelength = 79
-let g:black_skip_string_normalization = 1
+" let g:black_skip_string_normalization = 1
 
 " Frontend
-au BufNewFile,BufRead *.js, *.html, *.css
-			\ set tabstop=2
-			\ set softtabstop=2
-			\ set shiftwidth=2
+au BufNewFile,BufRead *.js, *.html, *.css, *.xml
+			\ set tabstop=2 |
+			\ set softtabstop=2 |
+			\ set shiftwidth=2 |
+			\ set autoindent
+
+" Emmet
+Plugin 'mattn/emmet-vim'
 
 " Others
 Plugin 'tpope/vim-surround'
@@ -178,7 +190,6 @@ if ( $TERM == "xterm-256color" || $TERM == "screen-256color" )
 	" Enable powerline too, since we can.
 	set rtp+=/usr/share/powerline/bindings/vim/
 endif
-
 
 " Move insert mode
 :imap <C-h> <C-o>h
