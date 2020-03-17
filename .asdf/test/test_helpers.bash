@@ -45,7 +45,7 @@ install_dummy_exec_path_script() {
   mkdir "$custom_dir"
   touch "$custom_dir/$name"
   chmod +x "$custom_dir/$name"
-  echo "echo 'bin/custom/$name'" > "$exec_path"
+  echo "echo 'bin/custom/$name'" >"$exec_path"
   chmod +x "$exec_path"
 }
 
@@ -59,4 +59,3 @@ setup_repo() {
   cp -r "$BATS_TEST_DIRNAME/fixtures/dummy_plugins_repo" "$ASDF_DIR/repository"
   touch "$(asdf_dir)/tmp/repo-updated"
 }
-

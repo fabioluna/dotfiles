@@ -88,6 +88,46 @@ Note: This will only apply for users who have enabled the `legacy_version_file` 
 
 This can be used to further parse the legacy file found by asdf. If `parse-legacy-file` isn't implemented, asdf will simply cat the file to determine the version. The script will be passed the file path as its first argument.
 
+## Extension commands for asdf CLI.
+
+It's possible for plugins to define new asdf commands by providing `bin/command*` scripts or executables that will
+be callable using the asdf command line interface by using the plugin name as a subcommand.
+
+For example, suppose a `foo` plugin has:
+
+```shell
+foo/
+  bin/
+    command
+    command-bat
+    command-bat-man
+    command-help
+```
+
+Users can now execute
+
+```shell
+$ asdf foo         # same as running `$ASDF_DATA_DIR/plugins/foo/bin/command`
+$ asdf foo bar     # same as running `$ASDF_DATA_DIR/plugins/foo/bin/command bar`
+$ asdf foo help    # same as running `$ASDF_DATA_DIR/plugins/foo/bin/command-help`
+$ asdf foo bat man # same as running `$ASDF_DATA_DIR/plugins/foo/bin/command-bat-man`
+$ asdf foo bat baz # same as running `$ASDF_DATA_DIR/plugins/foo/bin/command-bat baz`
+```
+
+Plugin authors can use this feature to provide utilities related to their tools,
+or even create plugins that are just new command extensions for asdf itself.
+
+When `command*` files exists but have no executable bit set, they are considered to be
+bash scripts and will be sourced having all the functions from `$ASDF_DIR/lib/utils.sh`
+available. Also, the `$ASDF_CMD_FILE` resolves to the full path of the file being sourced.
+If the executable bit is set, they are just executed and replace the asdf execution.
+
+A good example of this feature is for plugins like `nodejs`, where people must import the release team keyring before
+installing a nodejs version. Authors can provide a handy extension command for this without users
+having to know where exactly is the plugin was installed.
+
+If your plugin provides an asdf extension command, be sure to mention about it on your plugin's README.
+
 ## Custom shim templates
 
 **PLEASE use this feature only if absolutely required**
@@ -96,39 +136,49 @@ asdf allows custom shim templates. For an executable called `foo`, if there's a 
 
 This must be used wisely. For now AFAIK, it's only being used in the Elixir plugin, because an executable is also read as an Elixir file apart from just being an executable. Which makes it not possible to use the standard bash shim.
 
-**Important: Shim metadata**
-
-If you create a custom shim, be sure to include a comment like the following (replacing your plugin name) in it:
-
-```
-# asdf-plugin: plugin_name
-```
-
-asdf uses this `asdf-plugin` metadata to remove unused shims when uninstalling.
-
 ## Testing plugins
 
 `asdf` contains the `plugin-test` command to test your plugin. You can use it as follows
 
 ```sh
-asdf plugin-test <plugin-name> <plugin-url> [test-command] [--asdf-tool-version version]
+asdf plugin test <plugin-name> <plugin-url> [--asdf-tool-version <version>] [--asdf-plugin-gitref <git-ref>] [test-command*]
 ```
 
-The two first arguments are required. The second two arguments are optional. The third is a command can also be passed to check it runs correctly. For example to test the NodeJS plugin, we could run
+Only the two first arguments are required.
+If __version_ is specified, the tool will be installed with that specific version. Defaults to whatever returns `asdf latest <plugin-name>`.
+If _git-ref_ is specified, the plugin itself is checked out at that commit/branch/tag, useful for testing a pull-request on your plugin's CI.
+
+Rest arguments are considered the command to execute to ensure the installed tool works correctly.
+Normally it would be something that takes `--version` or `--help`.
+For example, to test the NodeJS plugin, we could run
 
 ```sh
-asdf plugin-test nodejs https://github.com/asdf-vm/asdf-nodejs.git 'node --version'
+asdf plugin test nodejs https://github.com/asdf-vm/asdf-nodejs.git node --version
 ```
 
-The fourth is a tool version that can be specified if you want the test to install a specific version of the tool. This can be useful if not all versions are compatible with all the operating systems you are testing on. If you do not specify a version the last version in the `list-all` output will be used.
+We strongly recommend you test your plugin on a CI environment and make sure it works on both Linux and OSX.
 
-We strongly recommend you test your plugin on TravisCI, to make sure it works on both Linux and OSX.
+#### Example Github Action
+
+The [asdf-vm/actions](https://github.com/asdf-vm/actions) repo provides a GitHub Action for testing your plugins hosted on github.
+
+```yaml
+steps:
+  - name: asdf_plugin_test
+    uses: asdf-vm/actions/plugin-test@v1.0.0
+    with:
+      command: "my_tool --version"
+    env:
+      GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically provided
+```
+
+#### Example TravisCI config
 
 Here is a sample `.travis.yml` file, customize it to your needs
 
 ```yaml
 language: c
-script: asdf plugin-test nodejs $TRAVIS_BUILD_DIR 'node --version'
+script: asdf plugin test nodejs $TRAVIS_BUILD_DIR 'node --version'
 before_script:
   - git clone https://github.com/asdf-vm/asdf.git asdf
   - . asdf/asdf.sh
@@ -142,7 +192,7 @@ When using another CI, you will need to check what variable maps to the repo pat
 
 You also have the option to pass a relative path to `plugin-test`.
 
-For example, if the test script is ran in the repo directory: `asdf plugin-test nodejs . 'node --version'`.
+For example, if the test script is ran in the repo directory: `asdf plugin test nodejs . 'node --version'`.
 
 ## GitHub API Rate Limiting
 

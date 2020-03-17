@@ -7,7 +7,7 @@
 Clone only the latest branch:
 
 ```shell
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.4
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.6
 ```
 
 Alternately, you can clone the whole repo and checkout the latest branch:
@@ -24,6 +24,12 @@ Install using the Homebrew package manager on macOS:
 
 ```shell
 brew install asdf
+```
+
+To use the latest changes, you can point Homebrew to the master branch of the repo:
+
+```shell
+brew install asdf --HEAD
 ```
 
 <!-- tabs:end -->
@@ -46,6 +52,12 @@ Installation via **Git**:
 ```bash
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
+```
+
+Note if you are using Catalina or newer, the default shell has changed to Zsh:
+
+```bash
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zprofile
 ```
 
 Installation via **Homebrew**:

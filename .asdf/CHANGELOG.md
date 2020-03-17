@@ -1,6 +1,92 @@
 # Changelog
 
-## 0.7.5-dev
+## 0.7.7-dev
+
+## 0.7.6
+
+Features
+
+* Improve output format of `asdf plugin list all`
+
+  Long plugin names were causing problems with how we used printf.
+  Now we use the `column` command to properly render output.
+
+* Now `asdf plugin list` can take both `--urls` and `--refs` options.
+
+  When `--url` is used, we print the plugin's remote origin URL.
+  While `--refs` prints the git branch/commit the plugin is at.
+
+* It's now possible to update a plugin to an specific branch/commit.
+
+  `git plugin update <name> [git-ref]`
+
+  Checkouts a plugin to the specified `git-ref`. Defaults to `master`
+
+* Now the `asdf plugin test` command can be specified with a plugin commit/branch to test.
+
+  This will help CI checks to actually test the commit they are running for.
+  Previously we always used the plugin's `master` branch.
+
+* Subcommand CLI support.
+
+   Users familiar with sub-command aware tools like `git` can now
+   use `asdf` commands in the same way. For example:
+
+   `asdf plugin list all` is equivalent to `asdf plugin-list-all`
+
+   This is also the case for plugin extension commands, where the
+   plugin name is an asdf main subcommand. ie. Having a `foo` plugin
+   you can invoke: `asdf foo bar`
+
+* Make `asdf plugin test` use the new `asdf latest` command. (#541)
+
+   If a plugin version is not given explicitly, we use `asdf latest` to
+   obtain the version of plugin to install for testing.
+
+* `asdf --version` displays git revision when asdf_dir is a git clone.
+
+   This will allow better bug reports since people can now include the
+   git commit they are using.
+
+* Add support for asdf extension commands.
+
+   Plugins can provide `bin/command*` scripts or executables that will
+   be callable using the asdf command line interface.
+
+   See `docs/plugins-create.md` for more info.
+
+* Add support for installing the latest stable version of a tool (#216)
+
+    ```shell
+    asdf install python latest
+    asdf install python latest:3.7 # installs latest Python 3.7 version
+    ```
+
+* Add `asdf latest` command to display the latest stable version of a tool (#575)
+
+    ```shell
+    asdf latest python
+    asdf latest python 3.7 # displays latest Python 3.7 version
+    ```
+
+* Add support for filtering versions returned by `asdf list-all`
+
+    ```shell
+    asdf list-all python 3.7 # lists available Python 3.7 versions
+    ````
+
+## 0.7.5
+
+Features
+
+* Add AppVeyor config for builds on Windows, for eventual Windows support (#450, #451)
+* Add `--unset` flag to shell command (#563)
+
+Fixed Bugs
+
+* Fix multiple version install (#540, #585)
+* Handle dashes in executable/shim names properly (#565, #589)
+* Fix bug in sed command so `path:...` versions are handled correctly (#559, #591)
 
 ## 0.7.4
 
