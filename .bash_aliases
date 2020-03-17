@@ -28,7 +28,11 @@ alias apt='sudo apt'
 alias service='sudo service'
 alias kill='sudo kill -9'
 alias killall='sudo killall -9'
+alias cp='rsync --progress'
 
 # Vim 
 alias vim='vim.gtk'
-alias vims='cd ~/.vim/sessions/ && vim -S'
+alias vims='vim -S'
+
+# Powerline
+alias powerline='~/.powerline-2column.bash'

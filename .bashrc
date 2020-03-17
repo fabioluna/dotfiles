@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# fasd
-eval "$(fasd --init auto)"
-
 # GO Lang
 export PATH=$PATH:/usr/local/go/bin
 
@@ -158,7 +155,8 @@ fi
 unset color_prompt force_color_prompt
 
 # Visual Apps
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+export DISPLAY=127.0.0.1:0.0
 [[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
@@ -173,3 +171,9 @@ source ~/.powerline-2column.bash
 source ~/.fonts/*.sh
 alias config='/usr/bin/git --git-dir=/home/fabio/.cfg/ --work-tree=/home/fabio'
 export PATH="$PATH:/usr/local/bin/composer"
+
+# z
+source ~/.bash/z/z.sh
+
+# Pulse Audio
+export PULSE-SERVER=tcp:127.0.0.1
