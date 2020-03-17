@@ -1,0 +1,10 @@
+priority -1
+snippet ipdb
+import ipdb
+ipdb.set_trace()
+endsnippet
+
+priority -1
+snippet pyini
+# © `date +%y` Fábio Luna <fabiocluna@hotmail.com>
+endsnippet

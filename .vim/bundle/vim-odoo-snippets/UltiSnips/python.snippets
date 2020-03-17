@@ -1,0 +1,807 @@
+global !p
+def format_description(name):
+    return name.replace('_', ' ').replace('.', ' ').title()
+
+def format_class(name):
+    return name.replace('.', ' ').title().replace(' ', '')
+endglobal
+
+snippet pdb
+import pdb; pdb.set_trace();
+endsnippet
+
+snippet imodel
+from odoo import models
+${1}
+endsnippet
+
+snippet fi
+from . import ${1}
+endsnippet
+
+snippet ifield
+from odoo import _, api, fields, models
+${1}
+endsnippet
+
+snippet isuperuser
+from odoo import SUPERUSER_ID
+endsnippet
+
+snippet idp
+import odoo.addons.decimal_precision as dp
+endsnippet
+
+snippet iconfig
+from odoo.tools import config
+endsnippet
+
+snippet start
+# `date +%Y` @author `git config user.name` <`git config user.email`>
+${1}
+endsnippet
+
+snippet module
+{
+    "name": "${1:Module name}",
+    "summary": "${2:Module summary}",
+    "version": "${3: 10.0}.1.0.0",
+    "category": "${4:Uncategorized}",
+    "website": "${5:www.akretion.com}",
+    "author": "${6: Akretion}",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
+    },
+    "depends": [
+        "${7:base}",
+    ],
+    "data": [${8}
+    ],
+    "demo": [${9}
+    ],
+    "qweb": [${10}
+    ]
+}
+endsnippet
+
+snippet oo "Odoo Model"
+class `!p snip.rv=format_class(t[1])`(models.Model):
+    _name = '${1:ObjectName}'
+    _description = '`!p snip.rv=format_description(t[1])`'
+
+    ${2}
+
+endsnippet
+
+snippet ooi "Odoo Model Inherit"
+class `!p snip.rv=format_class(t[1])`(models.Model):
+    _inherit = '${1:ObjectName}'
+
+    ${2}
+
+endsnippet
+
+snippet oow "Odoo Wizard"
+class `!p snip.rv=format_class(t[1])`(models.TransientModel):
+    _name = '${1:ObjectName}'
+    _description = '`!p snip.rv=format_description(t[1])`'
+
+    ${2}
+endsnippet
+
+snippet oowi "Odoo Wizard Inherit"
+class `!p snip.rv=format_class(t[1])`(models.TransientModel):
+    _inherit = '${1:ObjectName}'
+
+    ${2}
+endsnippet
+
+snippet fch "char"
+${1:fieldname} = fields.Char(${2})
+${3}
+endsnippet
+
+snippet fint "integer"
+${1:fieldname} = fields.Integer(${2})
+${3}
+endsnippet
+
+snippet ffl "float"
+${1:fieldname} = fields.Float(digits_compute=dp.get_precision('${2:PrecisionName}')${3})${4}
+endsnippet
+
+snippet fbo "boolean"
+${1:fieldname} = fields.Boolean(${2:})${3}
+endsnippet
+
+snippet fdt "date"
+'${1:fieldname}': fields.date('${2:Label}', ${4}help='${3:Help note}'),${5}
+endsnippet
+
+snippet fdti "datetime"
+'${1:fieldname}': fields.datetime('${2:Label}', ${3}),${4}
+endsnippet
+
+snippet fsl "selection"
+${1:fieldname} = fields.Selection([
+	${2:('', '')}
+	],
+	${3})
+${4}
+`!p snip._parent.globals['last_field'] = t[1]`
+endsnippet
+
+snippet st "selection tuple"
+('${1:fieldname}', '`!p snip.rv=t[1].replace('_', ' ').title()`'),${2}
+endsnippet
+
+snippet fm2o "many2one"
+${1:fieldname}_id = fields.Many2one(
+    '${2:ObjectName}',
+    '`!p snip.rv=format_description(t[1])`'${3})${4}
+endsnippet
+
+snippet fm2m "many2many"
+${1:fieldname}_ids = fields.Many2many(
+    comodel_name='${2:ObjectName}',
+    string='`!p snip.rv=format_description(t[1])`'${3})${4}
+endsnippet
+
+snippet fo2m "one2many"
+${1:fieldname}_ids = fields.One2many(
+    '${2:object.name}',
+    '${3:fieldname}_id',
+    '`!p snip.rv=format_description(t[1])`'${4})${5}
+endsnippet
+
+snippet fpr "property"
+'${1:fieldname}': fields.property('${2:object}', method=${3:True},
+    string='${4:label}', type='${5:many2one}', ${7}help='${6:Help note}'),${8}
+endsnippet
+
+snippet ftx "text"
+${1:fieldname} = fields.Text(${2})${3}
+endsnippet
+
+snippet fbin "binary"
+'${1:fieldname}': fields.binary('${2:Label}', ${4}help='${3:Help note}'),${5}
+endsnippet
+
+snippet fref "reference"
+'${1:fieldname}': fields.reference('${2:Label}', selection=${3:[('', '')]}, size=128, ${5}help='${4:Help note}'),${6}
+# Attribute for fields
+endsnippet
+
+snippet cpt "compute"
+compute='_compute_`!p snip.rv=snip._parent.globals['last_field']`',
+endsnippet
+
+snippet fcpt " function compute"
+def _compute_`!p snip.rv=snip._parent.globals['last_field']`'(self):
+    for record in self:
+endsnippet
+
+snippet cpti "compute inverse"
+inverse='_inverse_`!p snip.rv=snip._parent.globals['last_field']`',
+endsnippet
+
+snippet fcpti "function compute inverse"
+def _inverse_`!p snip.rv=snip._parent.globals['last_field']`(self):
+    for record in self:
+endsnippet
+
+snippet cpts "compute search"
+search='_search_`!p snip.rv=snip._parent.globals['last_field']`',
+endsnippet
+
+snippet fcpts "function compute search"
+def _search_`!p snip.rv=snip._parent.globals['last_field']`(self):
+endsnippet
+
+snippet domain
+domain=[('${1:state}', '${2:=}', '${3:done}')]
+endsnippet
+
+snippet help
+help='${1:Help about Field}',
+endsnippet
+
+snippet readonly
+readonly=True, ${1}
+endsnippet
+
+snippet required
+required=True, ${1}
+endsnippet
+
+snippet translate argument
+translate=True, ${1}
+endsnippet
+
+snippet dp
+digits_compute=dp.get_precision('${1:PrecisionName}'), ${2}
+endsnippet
+
+snippet digits "digits"
+digits=(${1:16}, ${2:2}), ${3}
+endsnippet
+
+snippet digits "digits_compute"
+digits_compute=dp.get_precision('${1:PrecisionName}'), ${2}
+endsnippet
+
+snippet select
+select=True, ${1}
+endsnippet
+
+snippet ondel "OnDelete Cascade"
+ondelete='cascade', ${1}
+endsnippet
+
+snippet ondel "OnDelete Set Null"
+ondelete='set null', ${1}
+endsnippet
+
+snippet ondelete "OnDelete Cascade"
+ondelete='cascade', ${1}
+endsnippet
+
+snippet ondelete "OnDelete Set Null"
+ondelete='set null', ${1}
+endsnippet
+
+snippet store
+store={
+'${1:Model}': (
+${2:get_model_ids_to_update},
+[${3:fields}],
+${4:Priority}),
+},
+endsnippet
+
+snippet store "lambda"
+store={
+'${1:Model}': (
+lambda self, cr, uid, ids, c={}: ids,
+[${2:fields}],
+${3:Priority}),
+},
+
+#
+# Define function in osv.osv
+#
+endsnippet
+
+snippet func "def search"
+def search(self, cr, uid, args, offset=0, limit=None, order=None, context=None, count=False):
+    """
+    ${1:Comment}
+    """
+    if context is None:
+        context = {}
+
+    res = super(${2:ClassName}, self).search(cr, uid, args, offset=offset, limit=limit, order=order, context=context, count=count)
+    ${3}
+    return res
+endsnippet
+
+snippet func "def read"
+def read(self, cr, uid, ids, fields=None, context=None, load='_classic_read'):
+    if context is None:
+        context = {}
+${1}
+    res = super(${2:ClassName}, self).read(cr, uid, ids, fields, context=context)
+    ${3}
+    return res
+endsnippet
+
+snippet func "def create"
+def create(self, cr, uid, vals, context=None):
+    if context is None:
+        context = {}
+    ${1}
+    ${3:record}_id = super(${2:ClassName}, self).create(cr, uid, vals, context=context)
+    ${4}
+    return $3_id
+endsnippet
+
+snippet func "def write"
+def write(self, cr, uid, ids, values, context=None):
+    if context is None:
+        context = {}
+    ${1}
+    res = super(${2:ClassName}, self).write(cr, uid, ids, values, context=context)
+    ${3}
+    return res
+endsnippet
+
+snippet func "def unlink"
+def unlink(self, cr, uid, ids, context=None):
+    """
+    #TODO make doc string
+    ${2:Comment this}
+    """
+    if context is None:
+        context = {}
+    #TODO: process before delete resource
+    ${3}
+    res = super(${1:ClassName}, self).unlink(cr, uid, ids, context=context)
+    return res
+endsnippet
+
+snippet func "def copy"
+def copy(self, cr, uid, id, default=None, context=None):
+    """
+    #TODO make doc string
+    ${2:Comment this}
+    """
+    if context is None:
+        context = {}
+    #TODO : process on result
+    ${3}
+    return super(${1:ClassName}, self).copy(cr, uid, id, default, context=context)
+endsnippet
+
+snippet func "def default_get"
+def default_get(self, cr, uid, fields_list, context=None):
+    """
+    #TODO make doc string
+    ${1:Comment this}
+    """
+    if context is None:
+        context = {}
+    values = super(${2:ClassName}, self).default_get(cr, uid, fields_list, context=context)
+    ${3}
+    return values
+endsnippet
+
+snippet func "def fields_get"
+def fields_get(self, cr, uuid, fields=None, context=None):
+    """
+    #TODO make doc string
+    ${2:Comment this}
+    """
+    if context is None:
+        context = {}
+    #TODO : process on result
+    ${3}
+    return super(${1:ClassName}, self).fields_get(cr, uid, fields, context, read_access)
+endsnippet
+
+snippet func "def init"
+def init(self, cr):
+    """
+    ${2:Comment this}
+    """
+    #TODO : process on result
+    cr.execute("""CREATE OR REPLACE VIEW ${1:View} AS (
+            ${3:SELECT...})
+    """)
+${4}
+endsnippet
+
+snippet func "def _name_get"
+def name_get(self, cr, uid, ids, context=None):
+    """
+    #TODO make doc string
+    ${1:Comment this}
+    """
+    if context is None:
+        context = {}
+    if not len(ids):
+        return []
+    #TODO : search on name field or _res_name fields
+    #and make a result [(id, name), (id, name), ...]
+    reads = self.read(cr, uid, ids, [self._rec_name], context, load='_classic_write')]
+    res = []
+    ${2}
+    for read in reads:
+        res.append( ( read['id'], read[self._rec_name]) )
+    return res
+endsnippet
+
+snippet func "def _name_search"
+def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=80):
+    """
+    #TODO make doc string
+    ${1:Comment this}
+    """
+    #TODO: make a search on specific fields and get ids
+    if args is None:
+        args=[]
+    if context is None:
+        context = {}
+    ids = []
+    if name:
+        ids = self.search(cr, uid, [('code', 'ilike', name)] + args, limit=limit)
+    if not ids:
+        ids = self.search(cr, uid, [('name', operator, name)] + args, limit=limit)
+    return self.name_get(cr, uid, ids, context=context)
+    ${2}
+endsnippet
+
+snippet func "fields_view_get v 6.0"
+def fields_view_get(self, cr, uid, view_id=None, view_type='form', context=None, toolbar=False, submenu=False):
+    """
+    Comment here
+    """
+    # use lxml to compose the arch XML
+    arch = ${1:XML HERE}
+    fields = ${2:FIELDS HERE}
+    tb = {'print': [], 'action': [], 'relate': []}
+    result = {
+        'arch': arch,
+        'fields': fields,
+        'toolbar': tb,
+    }
+    return result
+###
+## Common method define in osv.osv
+##
+endsnippet
+
+snippet read
+self.read(cr, uid, ${1:ids}, ['${2:field}'], context=context)${3}
+endsnippet
+
+snippet browse
+self.browse(cr, uid, ${1:ids}, context=context)${2}
+endsnippet
+
+snippet search
+self.search(cr, uid, [('${1:state}', '${2:=}', '${3:done}')], context=context)${4}
+endsnippet
+
+snippet create
+id = self.create(cr, uid, ${1:vals}, context=context)${2}
+endsnippet
+
+snippet write
+self.write(cr, uid, ${1:ids}, ${2:vals}, context=context)${3}
+endsnippet
+
+snippet unlink
+self.unlink(cr, uid, ${1:ids}, context=context)${2}
+endsnippet
+
+snippet copy
+self.copy(cr, uid, ${1:ids}, ${2:default}, context=context)${3}
+endsnippet
+
+snippet perm_read
+self.perm_read(cr, uid, [${1:id}], context=context)${2}
+#
+# Define all variables in osv.osv begin by _
+#
+endsnippet
+
+snippet _ "_auto"
+_auto = False
+endsnippet
+
+snippet _ "_constraints"
+def ${1:_check_method}(self, cr, uid, ids, context=None):
+    #TODO : check condition and return boolean accordingly
+    if not context is None:
+        context = {}
+    return True
+
+_constraints = [
+    ($1, 'Error: Invalid Message', ['${2:field_name}']),
+]
+endsnippet
+
+snippet _ "_date_name"
+_date_name='${1:Date field}'
+endsnippet
+
+snippet _ "_defaults"
+_defaults = {
+    '${1:Field}': lambda *a: ${2:Value},
+}
+endsnippet
+
+snippet _ "_description"
+_description = ${1:Object description}
+endsnippet
+
+snippet _ "_order"
+_order = '${1:Field name to order}'
+endsnippet
+
+snippet _ "_parent_store"
+_parent_store = ${1:False}
+endsnippet
+
+snippet _ "_rec_name"
+_rec_name = '${1:Field name}'
+endsnippet
+
+snippet _ "_sequence"
+_sequence = '${1:Field name use as sequence}'
+endsnippet
+
+snippet _ "_sql_constraints"
+_sql_constraints = [
+    ('${1:Field name}_uniq', 'unique ($1)', 'The $1 of the OpenERPModel must be unique !'),
+]
+endsnippet
+
+snippet _ "_table"
+_table = '${1:Table name in PostgreSQL}'
+endsnippet
+
+snippet _ "_sql"
+_sql = """${1:CREATE TABLE .....}"""
+endsnippet
+
+snippet _ "_log_access"
+_log_access = False
+endsnippet
+
+snippet . "search"
+.search(cr, uid, ${1:domain}, offset=${2:0}, limit=${3:None}, order=${4:None}, context=${5:context})${6}
+endsnippet
+
+snippet . "browse"
+.browse(cr, uid, ${1:ids}, context=${2:context})${3}
+endsnippet
+
+snippet . "read"
+.read(cr, uid, ${1:ids}, ['${2:name}'], context=${3:context})${4}
+endsnippet
+
+snippet . "create"
+.create(cr, uid, ${1:vals}, context=${2:context})${3}
+endsnippet
+
+snippet . "write"
+.write(cr, uid, ${1:ids}, ${2:vals}, context=${3:context})${4}
+endsnippet
+
+snippet . "unlink"
+.unlink(cr, uid, ${1:ids}, context=${2:context})${3}
+endsnippet
+
+snippet . "copy"
+.copy(cr, uid, ${1:id}, ${2:default}, context=${3:context})${4}
+###
+## define exception
+endsnippet
+
+snippet raise "raise orm.except_orm(title, message)"
+raise orm.except_orm(
+_('${1:Error}'),
+_('${2:Message}'))
+###
+## Cursor
+endsnippet
+
+snippet cr "cr.execute()"
+cr.execute("""${1:Query}""")
+endsnippet
+
+snippet cr "cr.mogrify()"
+cr.mogrify("""${1:Query}""")
+endsnippet
+
+snippet cr "cr.commit()"
+cr.commit()
+endsnippet
+
+snippet cr "cr.rollback()"
+cr.rollback()
+endsnippet
+
+snippet cr "cr.close()"
+cr.close()
+endsnippet
+
+snippet cr "cr.autocommit()"
+cr.autocommit(${1:True})
+endsnippet
+
+snippet cr "cr.fetchall()"
+cr.fetchall()
+endsnippet
+
+snippet cr "cr.dictfetchall()"
+cr.dictfetchall()
+endsnippet
+
+snippet cr "cr.fetchone()"
+cr.fetchone()
+# Usefull tips
+endsnippet
+
+snippet pooler
+pooler.get_pool(cr.dbname)
+endsnippet
+
+snippet pool
+pool.get('${1:res.partner}')${2}
+endsnippet
+
+snippet sequence
+'sequence': fields.integer('${1:Sequence}'),${2}
+endsnippet
+
+snippet logger
+import netsvc
+logger = netsvc.Logger()
+endsnippet
+
+snippet ilogging
+import logging
+_logger = logging.getLogger(__name__)
+endsnippet
+
+snippet notify
+logger.notifyChannel('${1:module}', netsvc.${2:LOG_DEBUG}, '${3:Message}')${4}
+endsnippet
+
+snippet log "Debug"
+logger.debug('${1}')
+endsnippet
+
+snippet log "Info"
+logger.info('${1}')
+endsnippet
+
+snippet log "Warning"
+logger.warning('${1}')
+endsnippet
+
+snippet log "Error"
+logger.error('${1}')
+endsnippet
+
+snippet ctx
+ctx = context.copy()
+endsnippet
+
+snippet ref
+__, ${1:erp_id} = self.pool['ir.model.data'].get_object_reference(
+    cr, uid, '${2:module}', '${3:xml_id}')
+
+#
+# Other python declaration
+#
+endsnippet
+
+snippet fm
+# New Function
+endsnippet
+
+snippet super
+super(${1:ClassName}, self).${2:methodName}(cr, uid, ${3:ids}, ${4}context=context)${5}
+endsnippet
+
+snippet def
+def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+    """${3:docstring for $1}"""
+    ${4:pass}
+endsnippet
+
+snippet deff
+def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+    ${3}
+# New Method
+endsnippet
+
+snippet defs
+def ${1:mname}(self, ${2:arg}):
+    ${3:pass}
+# New Property
+endsnippet
+
+snippet property
+def ${1:foo}():
+    doc = "${2:The $1 property.}"
+    def fget(self):
+        ${3:return self._$1}
+    def fset(self, value):
+        ${4:self._$1 = value}
+# Lambda
+endsnippet
+
+snippet ld
+${1:var} = lambda ${2:vars} : ${3:action}
+endsnippet
+
+snippet self.
+self.${1:method}(${2})
+endsnippet
+
+snippet try Try/Except
+try:
+    ${1:pass}
+except ${2:Exception}, ${3:e}:
+    ${4:raise $3}
+endsnippet
+
+snippet try "Try/Except/Else"
+try:
+    ${1:pass}
+except ${2:Exception}, ${3:e}:
+    ${4:raise $3}
+else:
+    ${5:pass}
+endsnippet
+
+snippet try "Try/Except/Finally"
+try:
+    ${1:pass}
+except ${2:Exception}, ${3:e}:
+    ${4:raise $3}
+finally:
+    ${5:pass}
+endsnippet
+
+snippet try "Try/Except/Else/Finally"
+try:
+    ${1:pass}
+except ${2:Exception}, ${3:e}:
+    ${4:raise $3}
+else:
+    ${5:pass}
+finally:
+${6:pass}
+# if __name__ == '__main__':
+endsnippet
+
+snippet ifmain
+if __name__ == '__main__':
+    ${1:main()}
+# __magic__
+endsnippet
+
+snippet _ __init__
+__${1:init}__${2}
+endsnippet
+
+snippet ifcontext
+if context is None:
+    context = {}
+${1}
+# workflow
+endsnippet
+
+snippet trg "trg_write"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_write(uid, '${1:model}', ${2:id}, cr)
+endsnippet
+
+snippet trg "trg_trigger"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_trigger(uid, '${1:model}', ${2:id}, cr)
+endsnippet
+
+snippet trg "trg_delete"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_delete(uid, '${1:model}', ${2:id}, cr)
+endsnippet
+
+snippet trg "trg_create"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_create(uid, '${1:model}', ${2:id}, cr)
+endsnippet
+
+snippet trg "trg_validate"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_validate(uid, '${1:model}', ${2:id}, '${3:signal}', cr)
+endsnippet
+
+snippet trg "trg_redirect"
+wf_service = netsvc.LocalService("workflow")
+wf_service.trg_redirect(uid, '${1:model}', ${2:id}, ${3:new id}, cr)
+endsnippet
+
+snippet context_get
+context = self.pool.get('res.users').context_get(cr, uid)
+endsnippet
+
