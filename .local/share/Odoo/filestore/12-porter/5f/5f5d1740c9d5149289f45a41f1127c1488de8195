@@ -1,1 +1,0 @@
-{'id': '5dd6f71c74efe27d82654e4e', 'idIntegracao': '88', 'emissao': '21/11/2019', 'tipoAutorizacao': 'WEBSERVICE', 'situacao': 'REJEITADO', 'prestador': '31611499000105', 'tomador': '18853368000168', 'valorServico': 1550, 'mensagem': 'Erro ao Assinar: Certificado vencido em: 14/11/2019 10:50:00'}

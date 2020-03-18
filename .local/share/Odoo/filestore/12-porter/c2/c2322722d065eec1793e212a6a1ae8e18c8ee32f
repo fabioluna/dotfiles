@@ -1,1 +1,0 @@
-{'id': '5de80548438ce3b318afca57', 'idIntegracao': '121', 'emissao': '04/12/2019', 'tipoAutorizacao': 'WEBSERVICE', 'situacao': 'REJEITADO', 'prestador': '31611499000105', 'tomador': '17095397000145', 'valorServico': 7009, 'mensagem': 'Erro ao montar notas - Padrão TECNONFSE não encontrado no arquivo de configurações'}
