@@ -1,0 +1,120 @@
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+	<Nfse versao="2.02">
+		<InfNfse Id="NFSe201900000000034">
+			<Numero>201900000000034</Numero>
+			<CodigoVerificacao>EC6T-XKJZ</CodigoVerificacao>
+			<DataEmissao>2019-11-07T21:01:35.46</DataEmissao>
+			<OutrasInformacoes>Contribuinte Optante do Simples Nacional.\\s\\n</OutrasInformacoes>
+			<ValoresNfse>
+				<BaseCalculo>6677</BaseCalculo>
+				<Aliquota>2.01</Aliquota>
+				<ValorIss>134.21</ValorIss>
+				<ValorLiquidoNfse>6677</ValorLiquidoNfse>
+			</ValoresNfse>
+			<PrestadorServico>
+				<IdentificacaoPrestador>
+					<CpfCnpj>
+						<Cnpj>31611499000105</Cnpj>
+					</CpfCnpj>
+					<InscricaoMunicipal>1173735</InscricaoMunicipal>
+				</IdentificacaoPrestador>
+				<RazaoSocial>MC ARACAJU SISTEMAS ELETRONICOS LTDA EPP</RazaoSocial>
+				<NomeFantasia>PORTER ARACAJU</NomeFantasia>
+				<Endereco>
+					<Endereco>AVENIDA DOUTOR JOSÉ MACHADO DE SOUZA</Endereco>
+					<Numero>220</Numero>
+					<Complemento>sala 716</Complemento>
+					<Bairro>Jardins</Bairro>
+					<CodigoMunicipio>2800308</CodigoMunicipio>
+					<Uf>SE</Uf>
+					<Cep>49025740</Cep>
+				</Endereco>
+				<Contato>
+					<Telefone>7996764468</Telefone>
+					<Email>aracaju@porterdobrasil.com.br</Email>
+				</Contato>
+			</PrestadorServico>
+			<OrgaoGerador>
+				<CodigoMunicipio>2800308</CodigoMunicipio>
+				<Uf>SE</Uf>
+			</OrgaoGerador>
+			<DeclaracaoPrestacaoServico>
+				<InfDeclaracaoPrestacaoServico>
+					<Rps Id="Rps134">
+						<IdentificacaoRps>
+							<Numero>34</Numero>
+							<Serie>1</Serie>
+							<Tipo>1</Tipo>
+						</IdentificacaoRps>
+						<DataEmissao>2019-11-07</DataEmissao>
+						<Status>1</Status>
+					</Rps>
+					<Competencia>2019-11-01</Competencia>
+					<Servico>
+						<Valores>
+							<ValorServicos>6677</ValorServicos>
+						</Valores>
+						<IssRetido>2</IssRetido>
+						<ItemListaServico>3101</ItemListaServico>
+						<CodigoCnae>8220200</CodigoCnae>
+						<CodigoTributacaoMunicipio>3101</CodigoTributacaoMunicipio>
+						<Discriminacao>Atividade de Teleatendimento atraves de Portaria Remota</Discriminacao>
+						<CodigoMunicipio>2800308</CodigoMunicipio>
+						<ExigibilidadeISS>1</ExigibilidadeISS>
+					</Servico>
+					<Prestador>
+						<CpfCnpj>
+							<Cnpj>31611499000105</Cnpj>
+						</CpfCnpj>
+						<InscricaoMunicipal>1173735</InscricaoMunicipal>
+					</Prestador>
+					<Tomador>
+						<IdentificacaoTomador>
+							<CpfCnpj>
+								<Cnpj>17095397000145</Cnpj>
+							</CpfCnpj>
+						</IdentificacaoTomador>
+						<RazaoSocial>Condominio Residencial Clube Atalaia</RazaoSocial>
+						<Endereco>
+							<Endereco>Rua Francisco Rabelo Leite Neto</Endereco>
+							<Numero>500</Numero>
+							<Complemento>Atalaia</Complemento>
+							<Bairro>Atalaia</Bairro>
+							<CodigoMunicipio>2800308</CodigoMunicipio>
+							<Uf>SE</Uf>
+							<CodigoPais>1058</CodigoPais>
+							<Cep>49037240</Cep>
+						</Endereco>
+						<Contato>
+							<Telefone>4430379500</Telefone>
+							<Email>condominioclubeatalaia@gmail.com</Email>
+						</Contato>
+					</Tomador>
+					<RegimeEspecialTributacao>6</RegimeEspecialTributacao>
+					<OptanteSimplesNacional>1</OptanteSimplesNacional>
+					<IncentivoFiscal>2</IncentivoFiscal>
+				</InfDeclaracaoPrestacaoServico>
+			</DeclaracaoPrestacaoServico>
+		</InfNfse>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#NFSe201900000000034">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>VYOkzSSVPEdGimGQUCoOoe+MUKk=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>EqgKHEZ4zYmjDQkFa04mNhBsZ0C4PdfG3TtLx6+/TED5z54PFr63AwWasxpxC5AYhk5g+z14qABrJa5NFk5NynawdPXerkauxB+gpTt4yvyzaGYOz7Q2dAVuU3aCZ/M7+WrhvcCuPIdQm/PRGAqvuQGGxuONmwO3oINkdsz4vFvOe/vLtkWYnGqPRk0gV1g91xryiDOrvGVdfrqimTTZPjNLU21FXlFHsOPYAmz/r5tBymTyj6iZHmkuqWbb8AtKs1+J2LyDPN0w/Kpn44zHy8/AHhM73Kom4p0cIwAvcXQ/BXMPiLfqcZ3rfOA/v9+q+irGTVnzqgqWqiGUVsnFhQ==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</Nfse>
+</CompNfse>

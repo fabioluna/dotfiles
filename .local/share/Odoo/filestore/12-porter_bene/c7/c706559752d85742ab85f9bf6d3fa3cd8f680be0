@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20191125T130632Z - 82906@ip-172-31-31-226.sa-east-1.compute.internal
+DTSTART:20191125T170000Z
+DTEND:20191125T183000Z
+ATTENDEE:MAILTO:gregorio@porter.com.br
+ATTENDEE:MAILTO:carla@porter.com.br
+ATTENDEE:MAILTO:gregorio@porter.com.br
+ATTENDEE:MAILTO:juliano@porter.com.br
+ATTENDEE:MAILTO:porter.com.br_188frj4i15jauh7dg8avv56ann4kg6gb70pj4e1p6kqje
+ c9l60@resource.calendar.google.com
+CREATED:20191125T130632Z
+LOCATION:Porter Brasil-2º andar (1)
+SUMMARY:Reunião Líderes
+END:VEVENT
+END:VCALENDAR

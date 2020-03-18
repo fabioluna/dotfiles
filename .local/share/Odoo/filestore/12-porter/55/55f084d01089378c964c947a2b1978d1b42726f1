@@ -1,0 +1,21 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Body><ns2:nfeResultMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NFeAutorizacao4" xmlns:ns2="http://www.portalfiscal.inf.br/nfe/wsdl/NFeRetAutorizacao4"><retConsReciNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <tpAmb>1</tpAmb>
+  <verAplic>14.4.2</verAplic>
+  <nRec>310005609333085</nRec>
+  <cStat>104</cStat>
+  <xMotivo>Lote processado</xMotivo>
+  <cUF>31</cUF>
+  <dhRecbto>2019-09-10T15:18:53-03:00</dhRecbto>
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>14.4.2</verAplic>
+      <chNFe>31190929790837000163550010000000051000875877</chNFe>
+      <dhRecbto>2019-09-10T15:18:51-03:00</dhRecbto>
+      <nProt>131193414301096</nProt>
+      <digVal>URI3M/BPddbyhWXeECgej7smBAM=</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</retConsReciNFe></ns2:nfeResultMsg></soap:Body></soap:Envelope>

@@ -1,0 +1,24 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Body><nfeResultMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NFeRecepcaoEvento4"><retEnvEvento xmlns="http://www.portalfiscal.inf.br/nfe" versao="1.00">
+  <idLote>4</idLote>
+  <tpAmb>1</tpAmb>
+  <verAplic>14.4.2</verAplic>
+  <cOrgao>31</cOrgao>
+  <cStat>128</cStat>
+  <xMotivo>Lote de Evento Processado</xMotivo>
+  <retEvento versao="1.00">
+    <infEvento Id="ID131193414303625">
+      <tpAmb>1</tpAmb>
+      <verAplic>14.4.2</verAplic>
+      <cOrgao>31</cOrgao>
+      <cStat>135</cStat>
+      <xMotivo>Evento registrado e vinculado a NF-e</xMotivo>
+      <chNFe>31190929790837000163550010000000051000875877</chNFe>
+      <tpEvento>110111</tpEvento>
+      <xEvento>CANCELAMENTO</xEvento>
+      <nSeqEvento>1</nSeqEvento>
+      <CNPJDest>31334040000101</CNPJDest>
+      <dhRegEvento>2019-09-10T15:20:04-03:00</dhRegEvento>
+      <nProt>131193414303625</nProt>
+    </infEvento>
+  </retEvento>
+</retEnvEvento></nfeResultMsg></soap:Body></soap:Envelope>

@@ -1,0 +1,1249 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Porter</Author>
+  <LastAuthor>Porter</LastAuthor>
+  <Created>2019-09-23T13:01:54Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7650</WindowHeight>
+  <WindowWidth>20490</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="m2048993261984">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="16.5" ss:Color="#000000"
+    ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2048993262004">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="16.5" ss:Color="#000000"
+    ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="m2048993262024">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <NumberFormat ss:Format="#.##000"/>
+  </Style>
+  <Style ss:ID="m2048993262044">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="13" ss:Color="#000000"
+    ss:Bold="1"/>
+   <NumberFormat ss:Format="#.##000"/>
+  </Style>
+  <Style ss:ID="m2048993262064">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <NumberFormat ss:Format="#.##000"/>
+  </Style>
+  <Style ss:ID="s76">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="13" ss:Color="#000000"
+    ss:Bold="1"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s78">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s81">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="s83">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Color="#000000"/>
+   <NumberFormat ss:Format="#.##000"/>
+  </Style>
+  <Style ss:ID="s88">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="13" ss:Color="#000000"
+    ss:Bold="1"/>
+   <NumberFormat ss:Format="#.##000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="PosicaoContasPagar Bauru do mês">
+  <Table ss:ExpandedColumnCount="12" ss:ExpandedRowCount="77" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="300"/>
+   <Column ss:AutoFitWidth="0" ss:Width="120"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105"/>
+   <Column ss:AutoFitWidth="0" ss:Width="120" ss:Span="3"/>
+   <Column ss:Index="8" ss:AutoFitWidth="0" ss:Width="75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="90" ss:Span="1"/>
+   <Column ss:Index="11" ss:AutoFitWidth="0" ss:Width="225" ss:Span="1"/>
+   <Row ss:AutoFitHeight="0" ss:Height="21.75">
+    <Cell ss:MergeAcross="11" ss:StyleID="m2048993261984"><Data ss:Type="String">Posição de Contas a Pagar - Geral / Centro de Resultados</Data></Cell>
+   </Row>
+   <Row ss:Height="22.5">
+    <Cell ss:MergeAcross="11" ss:StyleID="m2048993262004"><Data ss:Type="String">Vencimento de 10/01/2019 até 09/30/2040 - Empresas: 0001</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:MergeAcross="11" ss:StyleID="m2048993262024"/>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Fornecedor</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Empresa</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Duplicata</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Vencimento</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Emissão</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Forma Pgto</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Pagto</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Atraso</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Vlr Dup</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Saldo</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Centro Resultado</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">Observações</Data></Cell>
+   </Row>
+   <Row ss:Height="64.5">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0457 - BANCO SANTANDER (BRASIL) S.A.</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">201812 - 11</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-22T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2018-11-26T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">3.385,87</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">3.385,87</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1350-EMPRESTIMOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">Valor do empréstimo: R$ 35.000,00 Valor da tarifa de abertura de crédito (TAC): R$ 990,00 Valor do IOF: R$ 445,84 Taxa de juros: 1,53% ao mês e 19,9% ao ano Custo Efetivo Total (CET): 2,56% ao mês e 35,96% ao ano</Data></Cell>
+   </Row>
+   <Row ss:Height="64.5">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0457 - BANCO SANTANDER (BRASIL) S.A.</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">201812 - 12</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-21T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2018-11-26T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">3.385,87</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">3.385,87</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1350-EMPRESTIMOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">Valor do empréstimo: R$ 35.000,00 Valor da tarifa de abertura de crédito (TAC): R$ 990,00 Valor do IOF: R$ 445,84 Taxa de juros: 1,53% ao mês e 19,9% ao ano Custo Efetivo Total (CET): 2,56% ao mês e 35,96% ao ano</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0375 - AHGORA SISTEMAS S/A</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">102019 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-21T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-01-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">231,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">231,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">REFERENTE NF 142585</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0044 - SEGWARE DO BRASIL LTDA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">102019 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-10T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-01-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">83,52</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">83,52</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">NF 48598</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0319 - ASSUA INCORPORADORA LTDA - EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">201901 - 07</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-08T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">1.517,70</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">1.517,70</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1029-ALUGUEL</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">ALUGUEL LOJA 04 MÊS 09/2019</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">320774 - 07</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-04-04T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">56,33</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">56,33</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17-BENS DE PEQUENO VALOR</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO MICROONDAS PARA COZINHA PORTER</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0200 - PORTER BRASIL TECNOLOGIA EIRELI ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2873 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">993,75</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">993,75</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">COMPRA DE TAG E CONTROLE PARA REVENDA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0200 - PORTER BRASIL TECNOLOGIA EIRELI ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2873 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">993,75</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">993,75</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">COMPRA DE TAG E CONTROLE PARA REVENDA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0463 - SO PORTOES BAURU</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">9757 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">245,89</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">245,89</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">16-D - DESPESAS COM IMPLANTAÇÃO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL UTILIZADO NO CENTREVILLE E NO MELRO. VALOR TOTAL DO BOLETO É R$ 399,15</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0463 - SO PORTOES BAURU</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">97571 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">153,26</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">153,26</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MERCADORIA REVENDA - CONTROLES VALOR TOTAL BOLETO É R$ 399,15</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0463 - SO PORTOES BAURU</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">9758 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-22T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">395,99</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">395,99</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">VALOR TOTAL DO BOLETO R$ 409,33</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0463 - SO PORTOES BAURU</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">97581 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-22T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">13,34</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">13,34</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1191-MANUTENCAO TECNICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTILIZADO PELOS TECNICOS VALOR TOTAL BOLETO R$ 409,33</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0191 - SEGBAURU DIST DE EQUIPAMENTOS DE SEG LTDA - EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">7436 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">210,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">210,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTILIZADO NO BURLE MARX</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0191 - SEGBAURU DIST DE EQUIPAMENTOS DE SEG LTDA - EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">7437 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-16T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">312,50</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">312,50</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL UTILIZADO NO TIETE</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0191 - SEGBAURU DIST DE EQUIPAMENTOS DE SEG LTDA - EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">7437 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-07-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">312,50</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">312,50</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL UTILIZADO NO TIETE</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0259 - BS - SEG SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">24727 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-09T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">208,15</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">208,15</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A SER UTLIZADO NA BASE</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">63 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">392,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">392,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 24,00. REFERENTE ADESIVAMENTO FACHADA PORTER BAURU LOJA 04</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">10196 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-13T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,08</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,08</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTIILIZADO NO RESIDENCIAL ISABELLA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">10196 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,08</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,08</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTIILIZADO NO RESIDENCIAL ISABELLA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">10196 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-12T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,09</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">322,09</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTIILIZADO NO RESIDENCIAL ISABELLA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0048 - ROBERTO SAAB</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">22840 - 05</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-21T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-16T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">233,34</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">233,34</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">949-DESPESAS MEDICAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 14,00 E IRRF R$ 10,50. REFERENTE RENOVAÇAO PCMSO E PPRA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">86 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">286,66</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">286,66</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">CONSERTO 2 TELEVISORES OPERAÇÃO</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">86 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">286,67</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">286,67</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">CONSERTO 2 TELEVISORES OPERAÇÃO</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">220819 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,72</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,72</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PRA ATENDER PROCESSO EM BAURU (BAURU/FLORIANOPOLIS)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">220819 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,72</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,72</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PRA ATENDER PROCESSO EM BAURU (BAURU/FLORIANOPOLIS)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">220819 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,73</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">105,73</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PRA ATENDER PROCESSO EM BAURU (BAURU/FLORIANOPOLIS)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2208 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PARA ATENDER PRICESSO EM BAURU. (FLORIANOPOLIS /SAO PAULO)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2208 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PARA ATENDER PRICESSO EM BAURU. (FLORIANOPOLIS /SAO PAULO)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2208 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PARA ATENDER PRICESSO EM BAURU. (FLORIANOPOLIS /SAO PAULO)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2208 - 05</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-01-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-23T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">100,98</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">974-HONORARIOS ADVOCATICIOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">DESPESAS VIAGEM DRA CAROLINA PARA ATENDER PRICESSO EM BAURU. (FLORIANOPOLIS /SAO PAULO)</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0102 - JAMIL ROBERTO SOUZA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17468 - A02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-08-27T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">240,50</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">240,50</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">EQUIPAMENTO A SER UTILIZADO NO TIETÊ</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0200 - PORTER BRASIL TECNOLOGIA EIRELI ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1413 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-03T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">43,22</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">43,22</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">977-HONORARIOS ADMINISTRATIVOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE IRRF R$ 43,22 NOTA 1413 PORTER MES AGOSTO 2019</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0102 - JAMIL ROBERTO SOUZA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17717 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-03T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">67,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">67,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL USADO NO MACHADO DE ASSIS. BOLETO VALOR DE R$ 297,00</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0102 - JAMIL ROBERTO SOUZA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17608 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-03T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">82,50</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">82,50</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL USADO NO GOLDEN PARK VALOR BOLETO R$ 297,00</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0102 - JAMIL ROBERTO SOUZA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17624 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-03T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">77,50</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">77,50</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL USADO NA MAQUINA KIPER PLATINUM . VALOR BOLETO R$ 297,00</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0102 - JAMIL ROBERTO SOUZA EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17653 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-03T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">20,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">20,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">6-MANUTENÇÃO E SUPORTE DE CONDOMÍNIO</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL UTILIZADO NA MAQUINA KIPER PLATINUM. VALOR BOLETO R$ 297,00</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0284 - JLV LIVRARIA LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">84413 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-05T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">94,08</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">94,08</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1121-MATERIAL DE EXPEDIENTE</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MATERIAL A SER UTILIZADO NA BASE</Data></Cell>
+   </Row>
+   <Row ss:Height="39">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0048 - ROBERTO SAAB</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">23021 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-10T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">5,20</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">5,20</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">949-DESPESAS MEDICAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RENOVAÇÃO ASO PERIODICO MARCIO, EDSON, MILTON, ANDREIA, ANGELICA, ROSELI, VINICIUS E PATRICIA.</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0170 - KIPER TECNOLOGIA LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3679 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-16T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">96,30</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">96,30</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1030-FRANQUIA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO IRRF NF 3679 R$ 96,30</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0299 - DEBORA CRISTINA VILLE DE OLIVEIRA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">136 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">24,12</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">24,12</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">961-SELECAO DE PESSOAL</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 24,12. SERVIÇOS DE RECURSOS HUMANOS 08/2019</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">349 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,38</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,38</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MOTOR CENTREVILLE INSTALAÇÃO</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">349 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,38</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,38</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MOTOR CENTREVILLE INSTALAÇÃO</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0192 - BS - SEG BAURU SISTEMAS ELETRONICOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">349 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,39</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">298,39</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">MOTOR CENTREVILLE INSTALAÇÃO</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0191 - SEGBAURU DIST DE EQUIPAMENTOS DE SEG LTDA - EPP</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">7543 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">242,00</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">242,00</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">191-MERCADORIAS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">UTILIZADO NO CAIOBA</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2320 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,93</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,93</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">CONSERTO TV PARA BASE. VALOR PARCELA R$ 232,90</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2320 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,94</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,94</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">CONSERTO TV PARA BASE. VALOR PARCELA R$ 232,90</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">2320 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,93</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">128,93</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">CONSERTO TV PARA BASE. VALOR PARCELA R$ 232,90</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">4157 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">8,70</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">8,70</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 8,70 CONSERTO TV PARA BASE .</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">4157 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,07</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,07</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 8,70 CONSERTO TV PARA BASE .</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">4157 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,07</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,07</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 8,70 CONSERTO TV PARA BASE .</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">4157 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-17T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,06</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">101,06</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1244-MANUTENCAO INFORMATICA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">RETENÇÃO DE ISS R$ 8,70 CONSERTO TV PARA BASE .</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 05</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-01-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 06</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-02-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 07</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-03-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 08</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-04-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 09</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-05-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">314692 - 10</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-06-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">269,90</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">299-IMOBILIZADO MAQUINAS E EQUIPAMENTOS</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO TV</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-15T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">66,82</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">66,82</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-24T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 05</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-01-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 06</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-02-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0296 - CARTÃO DE CREDITO PPI</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">3298 - 07</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-03-25T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">388,03</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">1441-MATERIAIS PROPAGANDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO DE PLACAS PORTER PARA COLOCAR NOS CONDOMINIOS</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0495 - COMPAC MAQUINAS E EQUIPAMENTOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">87402 - 01</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-10-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17-BENS DE PEQUENO VALOR</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO PARAFUSADEIRA DEVIDO PERDA DE MAQUINA PORTER.</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0495 - COMPAC MAQUINAS E EQUIPAMENTOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">87402 - 02</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-11-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17-BENS DE PEQUENO VALOR</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO PARAFUSADEIRA DEVIDO PERDA DE MAQUINA PORTER.</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0495 - COMPAC MAQUINAS E EQUIPAMENTOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">87402 - 03</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-12-18T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17-BENS DE PEQUENO VALOR</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO PARAFUSADEIRA DEVIDO PERDA DE MAQUINA PORTER.</Data></Cell>
+   </Row>
+   <Row ss:Height="26.25">
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0495 - COMPAC MAQUINAS E EQUIPAMENTOS LTDA</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">0001 - PPI SISTEMAS ELETRONICOS LTDA ME</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">87402 - 04</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2020-01-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="DateTime">2019-09-20T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">A PRAZO</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">31/12/1899</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s83"><Data ss:Type="String">247,25</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">17-BENS DE PEQUENO VALOR</Data></Cell>
+    <Cell ss:StyleID="s78"><Data ss:Type="String">AQUISIÇÃO PARAFUSADEIRA DEVIDO PERDA DE MAQUINA PORTER.</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:MergeAcross="7" ss:StyleID="m2048993262044"><Data ss:Type="String">Total:</Data></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">557.951,26</Data></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">557.855,14</Data></Cell>
+    <Cell ss:StyleID="s78"/>
+    <Cell ss:StyleID="s78"/>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:MergeAcross="11" ss:StyleID="m2048993262064"><Data ss:Type="String">Total de Registros Listados: 281</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.4921259845"/>
+    <Footer x:Margin="0.4921259845"/>
+    <PageMargins x:Bottom="0.984251969" x:Left="0.78740157499999996"
+     x:Right="0.78740157499999996" x:Top="0.984251969"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>0</VerticalResolution>
+   </Print>
+   <Selected/>
+   <DoNotDisplayGridlines/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>35</ActiveRow>
+     <RangeSelection>R36:R38</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
