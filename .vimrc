@@ -29,6 +29,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ryanoasis/vim-devicons'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+colorscheme delek
 
 " UI -> NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -90,7 +91,7 @@ let g:flake8_ignore="C0103"
 let g:syntastic_python_checkers=['flake8 --ignore=E225,E501,E302,E261,E262,E701,E241,E126,E127,E128,W801','python3']
 
 " Python -> Auto Complete
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " Track the engine.
@@ -132,11 +133,15 @@ let g:black_linelength = 79
 " let g:black_skip_string_normalization = 1
 
 " Frontend
-au BufNewFile,BufRead *.js, *.html, *.css, *.xml
+au BufNewFile,BufRead *.js, *.html, *.css
 			\ set tabstop=2 |
 			\ set softtabstop=2 |
 			\ set shiftwidth=2 |
 			\ set autoindent
+
+au BufNewFile,BufRead *.xml
+			\ set tabstop=4 |
+			\ set softtabstop=4
 
 " Emmet
 Plugin 'mattn/emmet-vim'

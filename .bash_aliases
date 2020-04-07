@@ -14,7 +14,6 @@ alias coverage11='odoo11 && cdodoo11 && coverage run ./odoo-bin -c odoo-config -
 alias odoo11='source ~/venvs/odoo11/bin/activate'
 alias odoo12='source ~/venvs/odoo12/bin/activate'
 alias odoo13='source ~/venvs/odoo13/bin/activate'
-alias ansible='source ~/venvs/ansible/bin/activate'
 alias flask-angular='source ~/venvs/flask-angular/bin/activate'
 alias erpnext='source ~/venvs/erpnext/bin/activate'
 

@@ -72,6 +72,11 @@ plugins=(
 z
 git
 gitfast
+rust
+ansible
+asdf
+cargo
+docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -133,3 +138,10 @@ __git_files () {
 . $HOME/.asdf/completions/asdf.bash
 
 
+
+# JAVA
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Golang
+export PATH=$PATH:/usr/local/go/bin

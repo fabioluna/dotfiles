@@ -5,6 +5,6 @@ ipdb.set_trace()
 endsnippet
 
 priority -1
-snippet pyini
+snippet start
 # © `date +%y` Fábio Luna <fabiocluna@hotmail.com>
 endsnippet
