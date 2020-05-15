@@ -150,5 +150,3 @@ export PATH=$PATH:/usr/local/go/bin
 # Kubectl
 source <(kubectl completion zsh)
 
-# PulseAudio
-export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}')
