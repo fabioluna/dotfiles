@@ -77,6 +77,7 @@ ansible
 asdf
 cargo
 docker
+docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -145,3 +146,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+
+# Kubectl
+source <(kubectl completion zsh)
+
+# PulseAudio
+export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}')
