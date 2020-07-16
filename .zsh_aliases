@@ -4,11 +4,11 @@ alias run11='cd /home/fabio/projects/odoo11/odoo && ./odoo-bin -c odoo-config'
 alias porter='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-porter'
 alias trust='cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-trust'
 alias run13='cd /home/fabio/projects/odoo13/odoo && ./odoo-bin -c odoo-config'
-alias odooshell11='odoo11 && cd /home/fabio/projects/odoo11/odoo && ./odoo-bin shell -c odoo-config -d'
+alias odooshell11='cd /home/fabio/projects/odoo11/odoo && ./odoo-bin shell -c odoo-config -d'
 alias odooshell12='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin shell -c odoo-config -d'
 alias co11='git checkout 11.0'
 alias pull11='cd /mnt/e/Desenvolvimento/python/odoo11/trustcode-addons && co11 && git pull && cd ../odoo-brasil && co11 && git pull && cd ../trustcode-enterprise && co11 && git pull && cd ../odoo && co11 && git pull && cd ../python-boleto && git checkout master3 && git pull && cd ../PyTrustNFe && git checkout master3 && git pull && cd ../odoo-reports && co11 && git pull'
-alias coverage11='odoo11 && cdodoo11 && coverage run ./odoo-bin -c odoo-config --test-enable --log-level='test' --xmlrpc-port=8050 -d teste_unitario_11 --stop-after-init --init='
+alias coverage11='cd /home/fabio/projects/odoo11/odoo && coverage run ./odoo-bin -c odoo-config --test-enable --log-level='test' --xmlrpc-port=8050 -d teste_unitario_11 --stop-after-init --init='
 
 # Venvs
 alias odoo11='source ~/venvs/odoo11/bin/activate'
@@ -46,3 +46,6 @@ alias docker-clean=' \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+
+# WSL
+alias explorer='explorer.exe'

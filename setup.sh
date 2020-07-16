@@ -6,7 +6,8 @@ SETUP_BASE_PATH=/home/fabio/setup
 
 install_zsh() {
     sudo apt install -y zsh
-    sudo chsh -s $(which zsh)
+    chsh -s $(which zsh)
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 git clone --bare https://github.com/fabioluna/dotfiles.git $HOME/.cfg
