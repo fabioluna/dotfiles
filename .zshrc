@@ -112,8 +112,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 # Tilix
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+#export DISPLAY="`ip -4 address | grep -A1 eth0 | grep inet | cut -d' ' -f6 | cut -d/ -f1`:0"
+#[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
@@ -139,7 +140,6 @@ __git_files () {
 . $HOME/.asdf/completions/asdf.bash
 
 
-
 # JAVA
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
@@ -150,3 +150,15 @@ export PATH=$PATH:/usr/local/go/bin
 # Kubectl
 source <(kubectl completion zsh)
 
+# Android
+export ANDROID_HOME=/home/fabio/Android
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# TLDR
+export PATH=$PATH:~/bin
+export TLDR_HEADER='magenta bold underline'
+export TLDR_QUOTE='italic'
+export TLDR_DESCRIPTION='green'
+export TLDR_CODE='red'
+export TLDR_PARAM='blue'

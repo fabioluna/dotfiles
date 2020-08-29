@@ -71,7 +71,7 @@ install_nginx() {
 create_directories
 install_docker
 install_xfce
-setup_android
+#setup_android
 install_vim_gtk
-install_nginx
+#install_nginx
 
