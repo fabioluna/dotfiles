@@ -53,3 +53,6 @@ alias explorer='explorer.exe'
 # Esa
 alias ls='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -G  --color auto --icons -a -s type'
 alias ll='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -l --color always --icons -a -s type'
+
+# Flutter
+alias flu='powershell.exe flutter'

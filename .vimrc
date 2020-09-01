@@ -186,5 +186,22 @@ autocmd FileType html,css,xml EmmetInstall
 Plug 'pearofducks/ansible-vim'
 
 
+" Flutter
+au BufNewFile,BufRead *.dart
+                        \ set tabstop=2 |
+                        \ set softtabstop=2 |
+                        \ set shiftwidth=2 |
+                        \ set autoindent
+
+Plug 'dart-lang/dart-vim-plugin'
+
+" Bash
+au BufNewFile,BufRead *.sh
+                        \ set tabstop=2 |
+                        \ set softtabstop=2 |
+                        \ set shiftwidth=2 |
+                        \ set autoindent
+
+
 call plug#end()
 
