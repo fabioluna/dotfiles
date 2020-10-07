@@ -1,6 +1,6 @@
 " auto-install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   "autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
@@ -43,16 +43,20 @@ Plug 'scrooloose/nerdcommenter'
 " Utils
 Plug 'liuchengxu/vim-which-key'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""Languages""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " General
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'albfan/ag.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+Plug 'voldikss/vim-floaterm'
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""Languages""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Python
 Plug 'heavenshell/vim-pydocstring'
