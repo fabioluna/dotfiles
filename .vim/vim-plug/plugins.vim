@@ -45,14 +45,16 @@ Plug 'liuchengxu/vim-which-key'
 
 " General
 Plug 'tpope/vim-surround'
-Plug 'kien/ctrlp.vim'
 Plug 'wakatime/vim-wakatime'
-Plug 'albfan/ag.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'voldikss/vim-floaterm'
 
+" Find and Replace
+Plug 'kien/ctrlp.vim'
+Plug 'albfan/ag.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'brooth/far.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""Languages""""""""""""""""""""""""""
