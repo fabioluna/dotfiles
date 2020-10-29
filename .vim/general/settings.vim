@@ -33,3 +33,5 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+let g:python3_host_prog = "/home/fabio/.asdf/shims/python3.8"
