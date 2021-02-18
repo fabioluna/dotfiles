@@ -9,6 +9,9 @@ set encoding=UTF-8
 set smarttab
 set expandtab
 set smartindent
+set tabstop=8
+set softtabstop=2
+set shiftwidth=2
 set number
 set numberwidth=3
 set hidden
@@ -34,4 +37,5 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-let g:python3_host_prog = "/home/fabio/.asdf/shims/python3.8"
+"let g:python3_host_prog = "/home/fabio/.asdf/installs/python/3.9.0/bin/python3"
+let g:python3_host_prog = "/home/fabio/.asdf/shims/python3"

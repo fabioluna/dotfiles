@@ -39,3 +39,6 @@ function! s:show_documentation()
     call CocActionAsync('doHover')
   endif
 endfunction
+
+" Coc-snippets
+let g:coc_snippet_next = '<tab>'

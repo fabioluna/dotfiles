@@ -35,7 +35,7 @@ Plug 'APZelos/blamer.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntax 
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " Commentter
 Plug 'scrooloose/nerdcommenter'
@@ -56,6 +56,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'brooth/far.vim'
 
+" Debug
+Plug 'puremourning/vimspector'
+
+" Vim in Browser 🤘
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""Languages""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,12 +71,16 @@ Plug 'heavenshell/vim-pydocstring'
 Plug 'nvie/vim-flake8'
 Plug 'psf/black' ", { 'tag': '*' }
 Plug 'fisadev/vim-isort'
+Plug 'tell-k/vim-autopep8'
 
 " Ansible
 Plug 'pearofducks/ansible-vim'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
+
+" Makdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 call plug#end()
 

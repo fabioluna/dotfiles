@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -78,6 +85,7 @@ asdf
 cargo
 docker
 docker-compose
+genpass
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,12 +120,20 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 # Tilix
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+################ Only use this in wsl ######################
+#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 #export DISPLAY="`ip -4 address | grep -A1 eth0 | grep inet | cut -d' ' -f6 | cut -d/ -f1`:0"
 #[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
+fi
+
+# Set default clip tool
+if [[ -f /usr/bin/xclipboard ]]; then
+  export CLIP_TOOL=clipit
+else
+  export CLIP_TOOL=clip.exe
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -127,7 +143,7 @@ fi
 process_id=$(/bin/ps -aux | grep "nginx" | grep -v "grep" | awk '{print $2}')
 
 if [ ! $process_id ]; then
-  sudo /home/fabio/.local/bin/./startup.sh
+  /home/fabio/.local/bin/./startup.sh
 fi
 
 # Git
@@ -147,16 +163,13 @@ export PATH=$PATH:$JAVA_HOME/bin
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
-# Kubectl
-source <(kubectl completion zsh)
-
 # Android
 export ANDROID_HOME=/home/fabio/Android
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # TLDR
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/.bin
 export TLDR_HEADER='magenta bold underline'
 export TLDR_QUOTE='italic'
 export TLDR_DESCRIPTION='green'
@@ -165,3 +178,14 @@ export TLDR_PARAM='blue'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# TMUX
+#if [ -z "$TMUX" ]; then
+        #session_name="skynet"$(tmux list-sessions | wc -l)
+        #echo $session_name
+        #tmux new -s $session_name
+#fi
+
+# Fonts
+xset +fp /home/fabio/.local/share/fonts
+xset fp rehash

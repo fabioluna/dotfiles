@@ -1,10 +1,12 @@
 # Odoo
-alias cdodoo11='cd /home/fabio/projects/odoo11/odoo'
-alias run11='cd /home/fabio/projects/odoo11/odoo && ./odoo-bin -c odoo-config'
-alias porter='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-porter'
-alias trust='cd /home/fabio/projects/odoo12/odoo && ./odoo-bin -c odoo-config-trust'
-alias run13='cd /home/fabio/projects/odoo13/odoo && ./odoo-bin -c odoo-config'
-alias run14='cd /home/fabio/projects/odoo14/odoo && ./odoo-bin -c odoo-config'
+alias up11='docker-compose --file /home/fabio/projects/code137/odoo/nds/docker-compose.yml up -d'
+alias up12='docker-compose --file /home/fabio/projects/code137/odoo/odoo12/docker-compose.yml up -d'
+alias up13='docker-compose --file /home/fabio/projects/code137/odoo/odoo13/docker-compose.yml up -d'
+alias up14='docker-compose --file /home/fabio/projects/code137/odoo/odoo14/docker-compose.yml up -d'
+alias down11='docker-compose --file /home/fabio/projects/code137/odoo/nds/docker-compose.yml down'
+alias down12='docker-compose --file /home/fabio/projects/code137/odoo/odoo12/docker-compose.yml down'
+alias down13='docker-compose --file /home/fabio/projects/code137/odoo/odoo13/docker-compose.yml down'
+alias down14='docker-compose --file /home/fabio/projects/code137/odoo/odoo14/docker-compose.yml down'
 alias odooshell11='cd /home/fabio/projects/odoo11/odoo && ./odoo-bin shell -c odoo-config -d'
 alias odooshell12='odoo12 && cd /home/fabio/projects/odoo12/odoo && ./odoo-bin shell -c odoo-config -d'
 alias co11='git checkout 11.0'
@@ -12,11 +14,7 @@ alias pull11='cd /mnt/e/Desenvolvimento/python/odoo11/trustcode-addons && co11 &
 alias coverage11='cd /home/fabio/projects/odoo11/odoo && coverage run ./odoo-bin -c odoo-config --test-enable --log-level='test' --xmlrpc-port=8050 -d teste_unitario_11 --stop-after-init --init='
 
 # Venvs
-alias odoo11='source ~/venvs/odoo11/bin/activate'
-alias odoo12='source ~/venvs/odoo12/bin/activate'
-alias odoo13='source ~/venvs/odoo13/bin/activate'
-alias flask-angular='source ~/venvs/flask-angular/bin/activate'
-alias erpnext='source ~/venvs/erpnext/bin/activate'
+alias pyenv='source .venv/bin/activate'
 
 # Postgres
 alias postgres='sudo service postgresql start'
@@ -30,16 +28,17 @@ alias kill='sudo kill -9'
 alias killall='sudo killall -9'
 alias cp='rsync --progress'
 alias cl='clear'
+alias gpg='gpg2'
 
 # Vim 
 #alias vim='vim.gtk'
 #alias vims='vim -S'
+if [[ -f /snap/bin/nvim ]]; then
+  alias vim='nvim'
+fi
 
 # Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-# Test
-alias python='python3'
 
 # Docker
 alias docker-clean=' \
@@ -47,6 +46,8 @@ alias docker-clean=' \
   docker image prune -f ; \
   docker network prune -f ; \
   docker volume prune -f '
+alias up='docker-compose up -d'
+alias down='docker-compose down'
 
 # WSL
 alias explorer='explorer.exe'
@@ -57,3 +58,6 @@ alias ll='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -l --color always --ico
 
 # Flutter
 alias flu='powershell.exe flutter'
+
+# TMUX
+alias attach='tmux attach -t'
