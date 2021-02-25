@@ -27,6 +27,7 @@ alias service='sudo service'
 alias kill='sudo kill -9'
 alias killall='sudo killall -9'
 alias cp='rsync --progress'
+alias backup='rsync -arvz --delete'
 alias cl='clear'
 alias gpg='gpg2'
 
