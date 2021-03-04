@@ -82,10 +82,11 @@ gitfast
 rust
 ansible
 asdf
-cargo
 docker
 docker-compose
 genpass
+tmux
+vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh

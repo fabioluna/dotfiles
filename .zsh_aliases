@@ -60,5 +60,3 @@ alias ll='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -l --color always --ico
 # Flutter
 alias flu='powershell.exe flutter'
 
-# TMUX
-alias attach='tmux attach -t'
