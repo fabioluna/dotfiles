@@ -190,3 +190,8 @@ export TLDR_PARAM='blue'
 # Fonts
 xset +fp /home/fabio/.local/share/fonts
 xset fp rehash
+
+# start X if on TTY 1
+if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
