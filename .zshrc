@@ -1,3 +1,7 @@
+# GPG
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -187,11 +191,8 @@ export TLDR_PARAM='blue'
         #tmux new -s $session_name
 #fi
 
-# Fonts
-xset +fp /home/fabio/.local/share/fonts
-xset fp rehash
-
 # start X if on TTY 1
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
+
