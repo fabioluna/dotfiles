@@ -16,3 +16,4 @@ let g:syntastic_python_checkers=['flake8 --ignore=E225,E501,E302,E261,E262,E701,
 nnoremap <F9> :Black<CR>
 let g:black_linelength = 79
 let g:vim_isort_map = '<C-i>'
+let g:vim_isort_python_version = 'python3'
