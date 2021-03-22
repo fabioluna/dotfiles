@@ -181,11 +181,9 @@ bindcode $mod+127 exec poweroff
 exec "setxkbmap -layout us,us -variant ,intl,br -option 'grp:win_space_toggle'"
 
 # Mapped Apps
-# WiFi
-bindsym $mod+Shift+w exec "nm-applet"
-
 # Browser
 bindsym $mod+w exec "microsoft-edge"
+bindsym $mod+Shift+w exec "microsoft-edge --inprivate"
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
