@@ -30,11 +30,12 @@ alias cp='rsync --progress'
 alias backup='rsync -arvz --delete'
 alias cl='clear'
 alias gpg='gpg2'
+alias calc='qalc'
 
 # Vim 
 #alias vim='vim.gtk'
 #alias vims='vim -S'
-if [[ -f /snap/bin/nvim ]]; then
+if [[ $(which nvim) ]]; then
   alias vim='nvim'
 fi
 
@@ -60,3 +61,5 @@ alias ll='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -l --color always --ico
 # Flutter
 alias flu='powershell.exe flutter'
 
+# Taskwarrior-tui
+alias tt='taskwarrior-tui'

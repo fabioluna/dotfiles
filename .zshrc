@@ -91,6 +91,7 @@ docker-compose
 genpass
 tmux
 vi-mode
+taskwarrior
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -162,8 +163,7 @@ __git_files () {
 
 
 # JAVA
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export PATH=$PATH:$JAVA_HOME/bin
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
@@ -195,4 +195,7 @@ export TLDR_PARAM='blue'
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
 fi
+
+# Taskd
+export TASKDDATA=/var/taskd
 
