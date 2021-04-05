@@ -14,12 +14,14 @@ call plug#begin('~/.vim/plugged')
 " Colors
 Plug 'flazz/vim-colorschemes'
 
-"" NERDTree
+"" Files and Trees
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -33,9 +35,6 @@ Plug 'APZelos/blamer.nvim'
 
 " Auto Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Syntax 
-"Plug 'dense-analysis/ale'
 
 " Commentter
 Plug 'scrooloose/nerdcommenter'
@@ -61,6 +60,7 @@ Plug 'puremourning/vimspector'
 
 " Vim in Browser 🤘
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""Languages""""""""""""""""""""""""""
