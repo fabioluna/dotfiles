@@ -88,7 +88,9 @@ ansible
 asdf
 docker
 docker-compose
+flutter
 genpass
+jump
 tmux
 vi-mode
 taskwarrior
@@ -129,7 +131,7 @@ source ~/.zsh_aliases
 ################ Only use this in wsl ######################
 #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 #export DISPLAY="`ip -4 address | grep -A1 eth0 | grep inet | cut -d' ' -f6 | cut -d/ -f1`:0"
-#[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
@@ -199,3 +201,8 @@ fi
 # Taskd
 export TASKDDATA=/var/taskd
 
+# Pywal
+(cat ~/.cache/wal/sequences &)
+
+GPG_TTY=$(tty)
+export GPG_TTY
