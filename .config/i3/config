@@ -27,11 +27,6 @@ font pango:CaskaydiaCove Nerd Font Mono 0
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# Adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -189,8 +184,19 @@ client.focused          #555555 #333333 #FFFFFF #FFFFFF   #D14124
 
 # Mapped Apps
 # Browser
-bindsym $mod+w exec "microsoft-edge"
-bindsym $mod+Shift+w exec "microsoft-edge --inprivate"
+bindsym $mod+w exec "microsoft-edge-dev"
+bindsym $mod+Shift+w exec "microsoft-edge-dev --inprivate"
+
+# Adjust volume in PulseAudio.
+# Ubuntu
+#bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
+#bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
+
+# Arch Linux
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
