@@ -138,7 +138,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 # Set default clip tool
-if [[ -f /usr/bin/xclipboard ]]; then
+if [[ -f /usr/bin/clipit ]]; then
   export CLIP_TOOL=clipit
 else
   export CLIP_TOOL=clip.exe

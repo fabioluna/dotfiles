@@ -16,13 +16,8 @@ alias coverage11='cd /home/fabio/projects/odoo11/odoo && coverage run ./odoo-bin
 # Venvs
 alias pyenv='source .venv/bin/activate'
 
-# Postgres
-alias postgres='sudo service postgresql start'
-alias pgadmin4='~/venvs/pgadmin4/pgadmin4.sh'
-
-# Ubuntu
+# Common
 alias rm='sudo rm'
-alias apt='sudo apt'
 alias service='sudo service'
 alias kill='sudo kill -9'
 alias killall='sudo killall -9'
@@ -32,9 +27,13 @@ alias cl='clear'
 alias gpg='gpg2'
 alias calc='qalc'
 
+# Arch
+alias pacman='sudo pacman'
+
+# Ubuntu
+alias apt='sudo apt'
+
 # Vim 
-#alias vim='vim.gtk'
-#alias vims='vim -S'
 if [[ $(which nvim) ]]; then
   alias vim='nvim'
 fi
@@ -55,11 +54,8 @@ alias down='docker-compose down'
 alias explorer='explorer.exe'
 
 # Esa
-alias ls='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -G  --color auto --icons -a -s type'
-alias ll='/home/fabio/.asdf/installs/rust/1.42.0/bin/exa -l --color always --icons -a -s type'
-
-# Flutter
-alias flu='powershell.exe flutter'
+alias ls='exa -G  --color auto --icons -a -s type'
+alias ll='exa -l --color always --icons -a -s type'
 
 # Taskwarrior-tui
 alias tt='taskwarrior-tui'
