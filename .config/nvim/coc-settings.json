@@ -3,7 +3,7 @@
     "dart"
   ],
   "flutter.lsp.initialization.closingLabels": true,
-  "java.format.settings.url": "/home/fabio/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+  "java.format.settings.url": "/home/fabio/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
   "java.completion.enabled": true,
   "flutter.provider.hot-reload": true,
   "flutter.provider.enableSnippet": true,
