@@ -59,3 +59,6 @@ alias ll='exa -l --color always --icons -a -s type'
 
 # Taskwarrior-tui
 alias tt='taskwarrior-tui'
+
+# List Repos
+alias list-repos='list-repos -g -c'

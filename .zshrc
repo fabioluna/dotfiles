@@ -1,7 +1,3 @@
-# GPG
-GPG_TTY=$(tty)
-export GPG_TTY
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -53,7 +49,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -91,9 +87,13 @@ docker-compose
 flutter
 genpass
 jump
+pip
+sudo
 tmux
 vi-mode
 taskwarrior
+zsh-syntax-highlighting
+emoji-cli
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -185,13 +185,6 @@ export TLDR_PARAM='blue'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# TMUX
-#if [ -z "$TMUX" ]; then
-        #session_name="skynet"$(tmux list-sessions | wc -l)
-        #echo $session_name
-        #tmux new -s $session_name
-#fi
 
 # start X if on TTY 1
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
