@@ -153,22 +153,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+exec_always $HOME/.config/polybar/launch-edp.sh
+exec_always $HOME/.config/polybar/launch-hdmi.sh
 
 #############################################################################
 ################## CUSTOM CONFIGURATIONS ####################################
 #############################################################################
-
-# Startup
-# Wallpapper
-exec_always feh --bg-fill $HOME/Pictures/Wallpapers/Skynet.png
-
-# Compton
-exec --no-startup-id compton -b
-
-# Clipit
-exec_always clipit
 
 # Shutdown Options
 bindcode $mod+107 exec i3-msg exit
@@ -182,6 +172,9 @@ exec "setxkbmap -layout us,us -variant ,intl,br -option 'grp:win_space_toggle'"
 # class                 border  bground text    indicator child_border
 client.focused          #555555 #333333 #FFFFFF #FFFFFF   #D14124
 
+# App Window Modes
+for_window [class="Pinentry-gtk-2"] floating enable
+
 # Mapped Apps
 # Browser
 bindsym $mod+w exec "microsoft-edge-dev"
@@ -194,8 +187,8 @@ bindsym $mod+Shift+w exec "microsoft-edge-dev --inprivate"
 #bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
 # Arch Linux
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Media player controls
@@ -239,10 +232,10 @@ mode "$mode_redshift" {
 # i3-radius
 smart_borders on
 smart_borders no_gaps
-border_radius 5
+border_radius 1
 
 # i3 Gaps
-for_window [class=".*"] border pixel 5 #*
+for_window [class=".*"] border pixel 1 #*
 gaps inner 10
 gaps outer 1
 smart_gaps on
@@ -367,3 +360,18 @@ mode "$mode_gaps_left" {
         bindsym Return mode "$mode_gaps"
         bindsym Escape mode "default"
 }
+
+# Startup
+# Wallpapper
+exec_always feh --bg-fill $HOME/Pictures/Wallpapers/Skynet.png
+
+# Compton
+exec --no-startup-id compton -b
+
+# Clipit
+#exec_always clipit
+# Activity Watch
+#exec_always --no-startup-id aw-qt
+# Use DEX to launch all programs that have Desktop Entry
+exec_always dex -a
+
