@@ -13,3 +13,4 @@ source $HOME/.vim/plug-config/floaterm.vim
 source $HOME/.vim/plug-config/fzf.vim
 source $HOME/.vim/plug-config/NERDCommenter.vim
 source $HOME/.vim/plug-config/NERDTree.vim
+source $HOME/.vim/plug-config/vimspector.vim

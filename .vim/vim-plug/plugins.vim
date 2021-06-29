@@ -26,7 +26,6 @@ Plug 'rbgrouleff/bclose.vim'
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'enricobacis/vim-airline-clock'
 
 " GIT
 Plug 'tpope/vim-fugitive'
@@ -41,12 +40,15 @@ Plug 'scrooloose/nerdcommenter'
 
 " Utils
 Plug 'liuchengxu/vim-which-key'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " General
 Plug 'tpope/vim-surround'
 Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-rooter'
 Plug 'voldikss/vim-floaterm'
+Plug 'Stoozy/vimcord'
+Plug 'ActivityWatch/aw-watcher-vim'
 
 " Find and Replace
 Plug 'kien/ctrlp.vim'
@@ -57,6 +59,7 @@ Plug 'brooth/far.vim'
 
 " Debug
 Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
 
 " Vim in Browser 🤘
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }

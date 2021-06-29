@@ -20,6 +20,7 @@ set relativenumber
 set clipboard^=unnamedplus
 set mouse=a
 set t_u7=
+set termguicolors
 syntax on
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
@@ -37,6 +38,3 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
-
-"let g:python3_host_prog = "/home/fabio/.asdf/installs/python/3.9.0/bin/python3"
-let g:python3_host_prog = "/home/fabio/.asdf/shims/python3"

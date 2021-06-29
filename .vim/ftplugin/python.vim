@@ -8,7 +8,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 
 let python_highlight_all=1
-let g:flake8_cmd="/home/fabio/.asdf/shims/flake8" 
+let g:flake8_cmd="asdf which flake8" 
 let g:PyFlakeCheckers = 'pep8,mccabe'
 let g:PyFlakeDefaultComplexity=10
 let g:flake8_ignore="C0103"

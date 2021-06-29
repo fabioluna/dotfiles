@@ -81,6 +81,31 @@ let g:which_key_map.b = {
       \ '?' : ['Buffers'   , 'fzf-buffer'],
       \ }
 
+fun GotoWindow(id)
+    call win_gotoid(a:id)
+    MaximizerToggle
+endfun
+
+" d is for debuger
+let g:which_key_map.d = {
+      \ 'name' : '+debuger' ,
+      \ 'd' : [':call vimspector#Launch()'                                    , 'run'],
+      \ 'c' : [':call GotoWindow(g:vimspector_session_windows.code)'          , 'go to code'],
+      \ 't' : [':call GotoWindow(g:vimspector_session_windows.tagpage)'       , 'go to tags'],
+      \ 'v' : [':call GotoWindow(g:vimspector_session_windows.variables)'     , 'go to variables'],
+      \ 'w' : [':call GotoWindow(g:vimspector_session_windows.watches)'       , 'go to watches'],
+      \ 's' : [':call GotoWindow(g:vimspector_session_windows.stack_trace)'   , 'go to stack trace'],
+      \ 'o' : [':call GotoWindow(g:vimspector_session_windows.output)'        , 'go to output'],
+      \ 'r' : [':call vimspector#Reset()'                                     , 'reset'],
+      \ 'j' : [':call vimspector#StepInto()'                                   , 'step into'],
+      \ 'k' : [':call vimspector#StepOut()'                                    , 'step out'],
+      \ 'l' : [':call vimspector#StepOver()'                                   , 'step over'],
+      \ 'C' : [':call vimspector#Continue()'                                  , 'continue'],
+      \ 'b' : [':call vimspector#ToggleBreakpoint()'                          , 'toggle break point'],
+      \ 'B' : [':call vimspector#ToggleConditionalBreakpoint()'               , 'toggle conditional break point'],
+      \ 'm' : [':MaximizerToggle!'                                            , 'maximaze panel'],
+      \ }
+
 " f is for find and replace
 let g:which_key_map.f = {
       \ 'name' : '+find & replace' ,

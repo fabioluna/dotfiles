@@ -7,6 +7,7 @@ source $HOME/.vim/vim-plug/plugins.vim
 source $HOME/.vim/keys/which-key.vim
 source $HOME/.vim/plug-config/ag.vim
 source $HOME/.vim/plug-config/airline.vim
+source $HOME/.vim/plug-config/airline-theme.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/coc.vim
 source $HOME/.vim/plug-config/floaterm.vim
