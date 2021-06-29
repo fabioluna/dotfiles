@@ -12,6 +12,8 @@ services:
       POSTGRES_DB: TEST_SM
     volumes:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - /etc/postgres/postgresql.conf:/etc/postgres/postgresql.conf
+    command: -c config_file=/etc/postgres/postgresql.conf
     restart: unless-stopped
 
   pgadmin:
