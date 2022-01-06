@@ -153,8 +153,29 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Polybar
-exec_always $HOME/.config/polybar/launch-edp.sh
-exec_always $HOME/.config/polybar/launch-hdmi.sh
+#exec_always $HOME/.config/polybar/launch-edp.sh
+#exec_always $HOME/.config/polybar/launch-hdmi.sh
+
+bar {
+  status_command i3blocks -c ~/.config/i3blocks_configs/config
+  position top
+  output eDP-1
+  font pango: CodeNewRoman Nerd Font 10
+  colors {
+    background #282828
+  }
+}
+
+bar {
+  status_command i3blocks -c ~/.config/i3blocks_configs/config2
+  position top
+  output HDMI-1
+  tray_output HDMI-1
+  font pango: CodeNewRoman Nerd Font 10
+  colors {
+    background #282828
+  }
+}
 
 #############################################################################
 ################## CUSTOM CONFIGURATIONS ####################################
@@ -177,8 +198,8 @@ for_window [class="Pinentry-gtk-2"] floating enable
 
 # Mapped Apps
 # Browser
-bindsym $mod+w exec "microsoft-edge-dev"
-bindsym $mod+Shift+w exec "microsoft-edge-dev --inprivate"
+bindsym $mod+w exec "microsoft-edge-stable"
+bindsym $mod+Shift+w exec "microsoft-edge-stable --inprivate"
 
 # Adjust volume in PulseAudio.
 # Ubuntu
