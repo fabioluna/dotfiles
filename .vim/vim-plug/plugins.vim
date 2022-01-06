@@ -31,6 +31,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'APZelos/blamer.nvim'
+Plug 'rhysd/git-messenger.vim'
 
 " Auto Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
