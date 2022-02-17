@@ -160,6 +160,7 @@ bar {
   status_command i3blocks -c ~/.config/i3blocks_configs/config
   position top
   output eDP-1
+  tray_output eDP-1
   font pango: CodeNewRoman Nerd Font 10
   colors {
     background #282828

@@ -48,7 +48,6 @@ Plug 'tpope/vim-surround'
 Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-rooter'
 Plug 'voldikss/vim-floaterm'
-Plug 'Stoozy/vimcord'
 Plug 'ActivityWatch/aw-watcher-vim'
 
 " Find and Replace
