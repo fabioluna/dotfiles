@@ -199,3 +199,6 @@ export TASKDDATA=/var/taskd
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# lvim
+export PATH=$PATH:$HOME/.local/bin
