@@ -212,6 +212,7 @@ bindsym $mod+Shift+w exec "microsoft-edge-stable --inprivate"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+Shift+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -222,9 +223,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # switch audio output, use pacmd list-cards to check profiles
 bindsym $mod+F11 exec "pacmd set-card-profile 0 output:hdmi-stereo+input:analog-stereo"
 bindsym $mod+F12 exec "pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo"
-
-# Mail
-bindsym $mod+e exec "mailspring"
 
 # Resource Monitor
 bindsym $mod+m exec "$terminal bpytop"
