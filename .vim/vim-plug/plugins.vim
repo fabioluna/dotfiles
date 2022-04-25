@@ -60,6 +60,8 @@ Plug 'brooth/far.vim'
 " Debug
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
 
 " Vim in Browser 🤘
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
@@ -81,6 +83,8 @@ Plug 'pearofducks/ansible-vim'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 " Makdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
