@@ -38,6 +38,7 @@ alias apt='sudo apt'
 # Vim 
 if [[ $(which nvim) ]]; then
   alias vim='nvim'
+  alias vi='nvim'
 fi
 
 # Dotfiles

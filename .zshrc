@@ -171,9 +171,9 @@ __git_files () {
 export PATH=$PATH:/usr/local/go/bin
 
 # Android
-export ANDROID_HOME=/home/fabio/Android
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=/home/fabio/Android/Sdk
+#export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # TLDR
 export PATH=$PATH:~/.bin
@@ -202,3 +202,6 @@ export GPG_TTY
 
 # lvim
 export PATH=$PATH:$HOME/.local/bin
+
+# Flutter slidy
+export PATH="$PATH":"$HOME/.pub-cache/bin"
