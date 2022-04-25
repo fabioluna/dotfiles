@@ -230,6 +230,9 @@ bindsym $mod+m exec "$terminal bpytop"
 # File Manager
 bindsym $mod+Shift+f exec "$terminal ranger"
 
+# Clipboard - Diodon
+bindsym $mod+v exec "diodon"
+
 # redshift modes
 bindsym $mod+b mode "$mode_redshift"
 set $mode_redshift Set colour temperature: (r)eset, (1)4.5K, (2)4.8K, (3)5K, (4)5.3K, (5)5.5K, (6)5.8K, (7)6K
