@@ -94,6 +94,7 @@ vi-mode
 taskwarrior
 zsh-syntax-highlighting
 emoji-cli
+firebase
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -205,3 +206,4 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Flutter slidy
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+

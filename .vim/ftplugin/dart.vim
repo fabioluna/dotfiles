@@ -3,3 +3,5 @@ au BufNewFile,BufRead *.dart
                         \ set softtabstop=2 |
                         \ set shiftwidth=2 |
                         \ set autoindent
+
+nnoremap <F9> :DartFmt<CR>

@@ -65,3 +65,6 @@ alias tt='taskwarrior-tui'
 
 # List Repos
 alias list-repos='list-repos -g -c'
+
+# Todoist
+alias td='todoist-cli'
