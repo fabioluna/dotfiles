@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $terminal kitty
+set $terminal alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -38,6 +38,7 @@ bindsym $mod+Shift+q kill
 
 # start Rofi
 bindsym Mod1+space exec rofi -combi-modi window#drun -show combi -modi combi -show-icons
+bindsym $mod+e exec rofimoji 
 
 # change focus
 bindsym $mod+h focus left
@@ -225,10 +226,11 @@ bindsym $mod+F11 exec "pacmd set-card-profile 0 output:hdmi-stereo+input:analog-
 bindsym $mod+F12 exec "pacmd set-card-profile 0 output:analog-stereo+input:analog-stereo"
 
 # Resource Monitor
-bindsym $mod+m exec "$terminal bpytop"
+bindsym $mod+m exec "kitty bpytop"
 
 # File Manager
-bindsym $mod+Shift+f exec "$terminal ranger"
+bindsym $mod+Shift+f exec "kitty ranger"
+bindsym $mod+Shift+t exec "peazip"
 
 # Clipboard - Diodon
 bindsym $mod+v exec "diodon"
