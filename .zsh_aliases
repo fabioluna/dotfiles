@@ -68,3 +68,9 @@ alias list-repos='list-repos -g -c'
 
 # Todoist
 alias td='todoist-cli'
+
+# Zellij
+alias za='zellij attach'
+alias zs='zellij -s'
+alias zl='zellij list-sessions'
+alias zk='zellij kill-session'
