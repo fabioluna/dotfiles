@@ -42,13 +42,14 @@ Plug 'scrooloose/nerdcommenter'
 " Utils
 Plug 'liuchengxu/vim-which-key'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'sheerun/vim-polyglot'
 
 " General
 Plug 'tpope/vim-surround'
 Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-rooter'
 Plug 'voldikss/vim-floaterm'
-Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'junegunn/vim-emoji'
 
 " Find and Replace
 Plug 'kien/ctrlp.vim'
@@ -88,6 +89,13 @@ Plug 'natebosch/vim-lsc-dart'
 
 " Makdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" Javascript
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+" .NET Core
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 

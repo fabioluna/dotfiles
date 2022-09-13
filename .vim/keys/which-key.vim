@@ -89,7 +89,7 @@ endfun
 " d is for debuger
 let g:which_key_map.d = {
       \ 'name' : '+debuger' ,
-      \ 'd' : [':call vimspector#Launch()'                                    , 'run'],
+      \ 'd' : [':call vimspector#Continue()'                                  , 'run'],
       \ 'c' : [':call GotoWindow(g:vimspector_session_windows.code)'          , 'go to code'],
       \ 't' : [':call GotoWindow(g:vimspector_session_windows.tagpage)'       , 'go to tags'],
       \ 'v' : [':call GotoWindow(g:vimspector_session_windows.variables)'     , 'go to variables'],
@@ -251,6 +251,12 @@ let g:which_key_map.l = {
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
       " \ 'o' : ['<Plug>(coc-openlink)'                , 'open link'],
+
+let g:which_key_map.o = {
+      \ 'name' : '+Omnisharp' ,
+      \ 'F' : ['<Plug>(omnisharp_code_format)'       , 'Format'],
+      \ 'q' : ['<plug>(omnisharp_code_actions)'      , 'quickfix'],
+      \ }
 
 " t is for terminal
 let g:which_key_map.t = {

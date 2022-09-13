@@ -8,7 +8,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 
 let python_highlight_all=1
-let g:flake8_cmd="/home/fabio/.asdf/installs/python/3.9.0/bin/flake8"
+let g:flake8_cmd="asdf which flake8"
 let g:PyFlakeCheckers = 'pep8,mccabe'
 let g:PyFlakeDefaultComplexity=10
 let g:flake8_ignore="C0103"
@@ -17,3 +17,5 @@ nnoremap <F9> :Black<CR>
 let g:black_linelength = 79
 let g:vim_isort_map = '<C-i>'
 let g:vim_isort_python_version = 'python3'
+let g:pydocstring_doq_path = '/home/fabio/.asdf/shims/doq'
+let g:python3_host_prog = 'asdf which python'
