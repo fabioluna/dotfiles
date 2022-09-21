@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup projects
+Wants=backup.timer
+
+[Service]
+ExecStart=/bin/rsync -arvuz --delete --exclude '.venv' --exclude 'pyc' /home/fabio/projects /mnt/Backup
+
+[Install]
+WantedBy=multi-user.target
