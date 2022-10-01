@@ -3,8 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
-"colorscheme delek
-colorscheme gruvbox
 let mapleader="\<space>"
 set encoding=UTF-8
 set smarttab
