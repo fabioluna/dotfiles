@@ -7,6 +7,7 @@ source $HOME/.vim/vim-plug/plugins.vim
 source $HOME/.vim/keys/which-key.vim
 source $HOME/.vim/plug-config/ag.vim
 source $HOME/.vim/plug-config/airline.vim
+source $HOME/.vim/plug-config/airline-theme.vim
 source $HOME/.vim/plug-config/ale.vim
 source $HOME/.vim/plug-config/coc.vim
 source $HOME/.vim/plug-config/colorscheme.vim
@@ -17,3 +18,4 @@ source $HOME/.vim/plug-config/NERDTree.vim
 source $HOME/.vim/plug-config/vimspector.vim
 source $HOME/.vim/plug-config/vim-emoji.vim
 source $HOME/.vim/plug-config/omnisharp-vim.vim
+source $HOME/.vim/plug-config/emmet.vim

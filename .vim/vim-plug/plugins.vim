@@ -97,5 +97,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typ
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
 
+" General
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
