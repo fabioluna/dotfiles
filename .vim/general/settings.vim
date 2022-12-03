@@ -19,6 +19,7 @@ set clipboard^=unnamedplus
 set mouse=a
 set t_u7=
 set termguicolors
+set timeoutlen=300
 syntax on
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 

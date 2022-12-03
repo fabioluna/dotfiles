@@ -21,7 +21,7 @@ command=~/.config/i3blocks/youtube-music/youtube.sh
 interval=5
 
 [WEATHER_SIGNALER]
-command=curl -Ss 'https://wttr.in?format=2' | xargs echo
+command=curl -Ss 'https://wttr.in/florianopolis?format=2' | xargs echo
 interval=120
 
 [github]

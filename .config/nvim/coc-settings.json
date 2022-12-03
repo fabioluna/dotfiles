@@ -9,6 +9,12 @@
   "flutter.sdk.flutter-lookup": "asdf which flutter",
   "java.format.settings.url": "/home/fabio/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
   "java.completion.enabled": true,
-  "python.pythonPath": "asdf which python",
   "xml.format.enabled": true,
+  "python.pythonPath": "asdf which python",
+  "python.venvPath": ".venv",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/home/fabio/.asdf/shims/black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/home/fabio/.asdf/shims/flake8",
+  "python.linting.pylintEnabled": false
 }

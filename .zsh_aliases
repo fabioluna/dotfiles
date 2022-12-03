@@ -19,7 +19,7 @@ alias coverage11='cd /home/fabio/projects/odoo11/odoo && coverage run ./odoo-bin
 alias pyenv='source .venv/bin/activate'
 
 # Common
-alias rm='sudo rm'
+alias rm='echo "trash-cli dummy!!!"'
 alias service='sudo service'
 alias kill='sudo kill -9'
 alias killall='sudo killall -9'

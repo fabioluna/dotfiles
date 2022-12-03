@@ -76,6 +76,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(69) } }
 Plug 'heavenshell/vim-pydocstring'
 Plug 'nvie/vim-flake8'
 Plug 'psf/black' ", { 'tag': '*' }
+"Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'fisadev/vim-isort'
 Plug 'tell-k/vim-autopep8'
 
