@@ -388,7 +388,7 @@ mode "$mode_gaps_left" {
 
 # Startup
 # Wallpapper
-exec_always feh --bg-fill $HOME/Pictures/Wallpapers/Skynet.png
+exec_always feh --no-fehbg --bg-fill $HOME/Pictures/Wallpapers/Skynet.png
 
 # Compton
 exec --no-startup-id compton -b

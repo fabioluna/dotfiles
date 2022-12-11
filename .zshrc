@@ -84,8 +84,6 @@ ansible
 asdf
 docker
 docker-compose
-flutter
-genpass
 jump
 pip
 sudo
@@ -94,7 +92,6 @@ vi-mode
 taskwarrior
 zsh-syntax-highlighting
 emoji-cli
-firebase
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -212,3 +209,8 @@ colorscript random
 
 # Starship
 eval "$(starship init zsh)"
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do time $shell -i -c exit; done
+}
