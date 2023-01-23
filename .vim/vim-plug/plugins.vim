@@ -40,6 +40,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'sheerun/vim-polyglot'
+Plug 'mattn/vim-chatgpt'
 
 " General
 Plug 'tpope/vim-surround'

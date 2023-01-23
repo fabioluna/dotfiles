@@ -1,14 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "dart"
-  ],
-  "flutter.lsp.initialization.closingLabels": true,
-  "flutter.provider.hot-reload": true,
-  "flutter.provider.enableSnippet": true,
-  "flutter.sdk.dart-lookup": "asdf which dart",
-  "flutter.sdk.flutter-lookup": "asdf which flutter",
-  "java.format.settings.url": "/home/fabio/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
-  "java.completion.enabled": true,
   "xml.format.enabled": true,
   "python.pythonPath": "asdf which python",
   "python.venvPath": ".venv",
@@ -17,5 +7,25 @@
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Path": "/home/fabio/.asdf/shims/flake8",
   "python.linting.pylintEnabled": false,
-  "python.analysis.diagnosticMode": "workspace"
+  "python.analysis.diagnosticMode": "workspace",
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [ "*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml" ],
+      "filetypes": ["haskell", "lhaskell"],
+      "settings": {
+        "haskell": {
+          "checkParents": "CheckOnSave",
+          "checkProject": true,
+          "maxCompletions": 40,
+          "formattingProvider": "ormolu",
+          "plugin": {
+            "stan": { "globalOn": true }
+          }
+        }
+      }
+    }
+  },
+  "prettier.tabWidth": 4
 }

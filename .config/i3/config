@@ -400,3 +400,6 @@ exec --no-startup-id compton -b
 # Use DEX to launch all programs that have Desktop Entry
 exec_always dex -a
 
+# Autotiling
+exec_always autotiling -l 2
+
