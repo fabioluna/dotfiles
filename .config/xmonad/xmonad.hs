@@ -7,12 +7,14 @@
 -- Normally, you'd only override those defaults you care about.
 --
 
+-- Base
 import XMonad
 import Data.Monoid
 import System.Exit
-
 import qualified XMonad.StackSet as W
 
+-- Actions
+import XMonad.Actions.CycleWS (Direction1D(..), moveTo, shiftTo, WSType(..), nextScreen, prevScreen)
 
 -- Data
 import Data.Maybe (fromJust)
@@ -166,6 +168,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Swap the focused window with the previous window
     , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
 
+    -- Swap the focused monitor with the next monitor
+    , ((modm .|. shiftMask, xK_l     ), nextScreen)
+
+    -- Swap the focused monitor with the previous monitor
+    , ((modm .|. shiftMask, xK_h     ), prevScreen)
+
     -- Shrink the master area
     , ((modm,               xK_h     ), sendMessage Shrink)
 
@@ -220,7 +228,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-shift-[1..9], Move client to workspace N
     --
     [((m .|. modm, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_0 .. xK_9]
+        | (i, k) <- zip (XMonad.workspaces conf) ([xK_1 .. xK_9] ++ [xK_0])
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     -- ++
 

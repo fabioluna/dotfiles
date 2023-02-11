@@ -6,7 +6,7 @@ scan_timeout = 10
 command_timeout = 1000
 
 [character]
-success_symbol = "[👉](bold green)"
+success_symbol = "[🐔](bold green)"
 error_symbol = "[🖕](bold red)"
 
 
