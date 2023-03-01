@@ -122,22 +122,22 @@ def make_xmobar_weather_string(weather_map: dict,
             color_map['windDirection'],
             wXD.wind_directions.get(weather_map["winddir16Point"], '')) + ':'
 
-        if int(weather_map['windspeedMs']) < int(weather_map['windgustMs']):
+        if int(weather_map['windspeedKmph']) < int(weather_map['windgustKmph']):
             report_string += wrap_xmobar_color(
                 give_wind_color(wind_color_map, int(weather_map['windspeedKmph'])),
-                weather_map['windspeedMs']) + '-'
+                weather_map['windspeedKmph']) + '-'
 
             report_string += wrap_xmobar_color(
                 give_wind_color(
                     wind_color_map,
                     int(weather_map['windgustKmph'])
                 ),
-                weather_map['windgustMs']) + 'm/s '
+                weather_map['windgustKmph']) + 'km '
 
         else:
             report_string += wrap_xmobar_color(
                 give_wind_color(wind_color_map, int(weather_map['windspeedKmph'])),
-                weather_map['windspeedMs']) + 'm/s '
+                weather_map['windspeedKmph']) + 'km '
 
         report_string += wrap_xmobar_color(
             color_map['humidity'],

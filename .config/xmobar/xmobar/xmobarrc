@@ -1,9 +1,5 @@
 Config {
-  font =         "Ubuntu Bold 9"
-  , additionalFonts = [ "Noto Color Emoji 9"
-                      , "Font Awesome 6 Free Solid 12"
-                      , "Font Awesome 6 Brands 12"
-                      ]
+  font =         "xft:FiraCode Nerd Font:size=9:bold:antialias=true,Noto Color Emoji:size=9"
   , bgColor = "#000000"
   , fgColor = "#ffffff"
   , position = Top
@@ -15,7 +11,7 @@ Config {
   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
   , pickBroadest =     False   -- choose widest display (multi-monitor)
   , persistent =       True    -- enable/disable hiding (True = disabled)
-  , template = " %galo% | %UnsafeStdinReader% }{ | %weather% | %battery% | %cpu% | %coretemp% | %memory% | %disku% | %wlan0wi% | %date% | %kbd% | "
+  , template = " %galo% | %UnsafeStdinReader% }{ | %weather% | %cpu% | %coretemp% | %memory% | %disku% | %wlan0wi% | %date% | %kbd% | "
   , commands = [
         -- Enable Clicks
         Run UnsafeStdinReader
@@ -46,7 +42,7 @@ Config {
                              , "--normal"   , "darkorange"
                              , "--high"     , "darkred"
                              ] 50
-
+                          
         -- memory usage monitor
         , Run Memory         [ "--template" ,"Mem: <usedratio>%"
                              , "--Low"      , "20"        -- units: %
@@ -80,7 +76,7 @@ Config {
         , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")
                              , ("us"         , "<fc=#8B0000>US</fc>")
                              ]
-
+        
         -- Wireless
         , Run Wireless "wlan0" [ "-t", "<essid> <fn=2><qualityvbar></fn>" ] 10
     ]
