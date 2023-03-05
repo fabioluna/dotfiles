@@ -51,7 +51,7 @@ import XMonad.Util.Run (hPutStrLn, runProcessWithInput, safeSpawn, spawnPipe)
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.SolarizedDark
+import Colors.GruvboxDark
 
 
 myFont :: String
@@ -339,9 +339,9 @@ myStartupHook = do
     spawn "killall trayer"
     spawn "killall xmobar"
     spawn "setxkbmap -layout us,us -variant ,intl,br -option 'grp:win_space_toggle'"
-    spawn "trayer --edge top --align right --widthtype request --expand true --SetDockType true --SetPartialStrut true --transparent true --alpha 0 --tint 0x1A1918 --expand true --heighttype pixel --height 18 --padding 1"
+    spawnPipe "trayer --edge top --align right --widthtype request --expand true --SetDockType true --SetPartialStrut true --transparent true --alpha 0 --tint 0x1A1918 --expand true --heighttype pixel --height 18 --padding 1"
     spawnOnce "feh --no-fehbg --bg-fill $HOME/Pictures/Wallpapers/Skynet.png"
-    spawnOnce "dex -a" 
+    spawnOnce "dex -a"
 
     -- see the better way to configure the tray
     -- spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --height 22")
