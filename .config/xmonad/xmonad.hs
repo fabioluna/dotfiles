@@ -219,6 +219,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0, xF86XK_AudioRaiseVolume), spawn "amixer -D pulse sset Master 5%+")
     , ((0, xF86XK_AudioMute), spawn "amixer -D pulse set Master 1+ toggle")
 
+    -- Toogle sound source
+    , (( modm               , xK_F12    ), spawn "python /home/fabio/.config/xmonad/scripts/toggle_sound.py")
+
     ]
 
     ++
