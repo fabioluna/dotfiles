@@ -15,13 +15,16 @@ Config {
   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
   , pickBroadest =     False   -- choose widest display (multi-monitor)
   , persistent =       True    -- enable/disable hiding (True = disabled)
-  , template = " %galo% | %UnsafeStdinReader% }{ | %weather% | %battery% | %cpu% | %coretemp% | %memory% | %disku% | %wlan0wi% | %date% | %kbd% | "
+  , template = " %galo% | %UnsafeStdinReader% }{ | %weather% | %battery% | %cpu% | %coretemp% | %memory% | %disku% | %wlan0wi% | %date% | %kbd% | %trayer% |"
   , commands = [
         -- Enable Clicks
         Run UnsafeStdinReader
 
         -- Galo
         , Run Com "echo" ["🐓"] "galo" 10
+
+        -- Trayer
+        , Run Com "echo" ["                           "] "trayer" 10
 
         -- Date
         , Run Date "<action=`xterm -e 'calendar'` button=1><fn=1> </fn><fc=#ABABAB> %F (%a) %T</fc></action>" "date" 10

@@ -339,10 +339,9 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawn "killall trayer"
     spawn "killall xmobar"
     spawn "setxkbmap -layout us,us -variant ,intl,br -option 'grp:win_space_toggle'"
-    spawnPipe "trayer --edge top --align right --widthtype request --expand true --SetDockType true --SetPartialStrut true --transparent true --alpha 0 --tint 0x1A1918 --expand true --heighttype pixel --height 18 --padding 1"
+    spawnOnce "trayer --edge top --align right --widthtype request --expand true --SetDockType true --SetPartialStrut true --transparent true --alpha 0 --tint 0x000000 --height 18"
     spawnOnce "feh --no-fehbg --bg-fill $HOME/Pictures/Wallpapers/Skynet.png"
     spawnOnce "dex -a"
 
