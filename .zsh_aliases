@@ -35,7 +35,7 @@ alias pacman='sudo pacman'
 # Ubuntu
 alias apt='sudo apt'
 
-# Vim 
+# Vim
 if [[ $(which nvim) ]]; then
   alias vim='nvim'
   alias vi='nvim'
@@ -67,7 +67,7 @@ alias tt='taskwarrior-tui'
 alias list-repos='list-repos -g -c'
 
 # Todoist
-alias td='todoist-cli'
+alias td='todoist'
 
 # Zellij
 alias za='zellij attach'

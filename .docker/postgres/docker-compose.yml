@@ -24,7 +24,7 @@ services:
     ports:
       - "5050:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: fabio@code137.com.br
+      PGADMIN_DEFAULT_EMAIL: fabio@tonder.io
       PGADMIN_DEFAULT_PASSWORD: 123
     restart: unless-stopped
 
