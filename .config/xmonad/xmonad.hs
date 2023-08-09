@@ -221,6 +221,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Toogle sound source
     , (( modm               , xK_F12    ), spawn "python /home/fabio/.config/xmonad/scripts/toggle_sound.py")
+    , (( modm               , xK_F4     ), spawn "sh -c /home/fabio/.config/xmonad/scripts/bluetooth_connect.sh")
 
     ]
 
