@@ -12,7 +12,6 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
 #
@@ -24,7 +23,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import bar, layout, widget
+import os
+import subprocess
+
+from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -97,9 +99,9 @@ keys = [
     # Quit qtile
     Key([mod], "Print", lazy.shutdown()),
     # Reboot
-    Key([mod], "Scroll_Lock", lazy.spawn("reboot")),
+    Key([mod], "Scroll_Lock", lazy.spawn("qtile cmd-obj -o cmd -f reboot")),
     # Shutdown
-    Key([mod], "Pause", lazy.spawn("shutdown -h now")),
+    Key([mod], "Pause", lazy.spawn("qtile cmd-obj -o cmd -f shutdown")),
     # Toggle sound source
     Key(
         [mod],
@@ -124,9 +126,15 @@ keys = [
     Key(
         [mod],
         "space",
-        lazy.spawn(
-            "setxkbmap -layout us,us -variant ,intl,br -option 'grp:win_space_toggle'"
-        ),
+        lazy.widget["keyboardlayout"].next_keyboard(),
+        desc="Next keyboard layout.",
+    ),
+    # Pulse audio controls
+    Key(
+        [mod],
+        "p",
+        lazy.spawn("pavucontrol"),
+        desc="Launch pavucontrol",
     ),
 ]
 
@@ -163,11 +171,11 @@ layouts = [
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    # layout.TreeTab(),
+    layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -183,8 +191,11 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox("🐓", name="galo"),
-                widget.CurrentLayout(),
+                widget.Image(
+                    filename="~/Pictures/Icons/Galo.png",
+                    scale="False",
+                ),
+                widget.CurrentLayoutIcon(),
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
@@ -194,13 +205,45 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
+                widget.Wttr(
+                    location={"Florianopolis": "Floripa"},
+                    format="%l:%c%t %p %w %m",
+                    update_interval=36000,
+                ),
+                widget.Sep(),
+                widget.Mpris2(),
+                widget.PulseVolume(
+                    emoji=True,
+                ),
+                widget.PulseVolume(),
+                widget.Sep(),
+                widget.KeyboardLayout(configured_keyboards=["us", "br"]),
+                widget.Sep(),
+                widget.DF(visible_on_warn=False, format="💾 {f}{m}"),
+                widget.Sep(),
+                widget.Memory(
+                    format="🧠 {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
+                    measure_mem="G",
+                ),
+                widget.Sep(),
+                widget.CPU(
+                    format="󰻠 {freq_current}GHz {load_percent}%",
+                ),
+                widget.ThermalSensor(),
+                widget.Sep(),
+                widget.Wlan(
+                    interface="wlan0",
+                    format="{essid} {percent:2.0%}",
+                ),
+                widget.Sep(),
+                widget.BatteryIcon(),
+                widget.Battery(format="{percent:2.0%}"),
+                widget.Sep(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                widget.Wallpaper(directory="/home/fabio/Pictures/Wallpapers", label=""),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
@@ -260,3 +303,11 @@ wl_input_rules = None
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+# Autostart
+
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser("~/.config/qtile/scripts/autostart.sh")
+    subprocess.call([home])
