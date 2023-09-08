@@ -140,6 +140,11 @@ keys = [
         "F12",
         lazy.spawn("/home/thebalance/.config/qtile/scripts/dpi.sh"),
     ),
+    Key(
+        [mod],
+        "a",
+        lazy.spawn("arandr"),
+    ),
 ]
 
 groups = [Group(i) for i in "1234567890"]
@@ -253,7 +258,6 @@ screens = [
                 widget.Sep(),
                 widget.Systray(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.Wallpaper(directory="/home/fabio/Pictures/Wallpapers", label=""),
             ],
             32,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
