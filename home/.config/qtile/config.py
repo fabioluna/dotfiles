@@ -229,10 +229,10 @@ screens = [
                     scroll=True,
                     scrol_fixed_width=True,
                 ),
-                widget.PulseVolume(
+                widget.Volume(),
+                widget.Volume(
                     emoji=True,
                 ),
-                widget.PulseVolume(),
                 widget.Sep(),
                 widget.KeyboardLayout(configured_keyboards=["us", "br"]),
                 widget.Sep(),
