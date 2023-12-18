@@ -34,12 +34,16 @@ mod = "mod4"
 
 terminal = "kitty"
 
+
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "l", lazy.layout.right(), desc="Move screen focus"),
+    Key([mod, "mod1"], "h", lazy.next_screen(), desc="Move focus to left"),
+    Key([mod], "l", lazy.layout.right(), desc="Move focus right"),
+    Key([mod, "mod1"], "l", lazy.prev_screen(), desc="Move screen focus"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     # Move windows between left/right columns or move up/down in current stack.
@@ -80,6 +84,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
@@ -94,7 +99,8 @@ keys = [
     ),
     Key([mod], "e", lazy.spawn("rofimoji")),
     # Edge Browser
-    Key([mod], "w", lazy.spawn("microsoft-edge-stable")),
+    Key([mod], "w", lazy.spawn(
+        "microsoft-edge-stable --force-device-scale-factor=1.5")),
     Key([mod, "shift"], "w", lazy.spawn("microsoft-edge-stable --inprivate")),
     # Diodon
     Key([mod], "v", lazy.spawn("diodon")),
@@ -262,9 +268,78 @@ screens = [
                 widget.Battery(format="{percent:2.0%}"),
                 widget.Sep(),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p",
+                             timezone="America/Denver"),
             ],
             32,
+            background="#1e1e2e",
+            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+        ),
+    ),
+    Screen(
+        top=bar.Bar(
+            [
+                widget.Image(
+                    filename="~/Pictures/Icons/Galo.png",
+                    scale="False",
+                ),
+                widget.CurrentLayoutIcon(),
+                widget.GroupBox(),
+                widget.Prompt(),
+                widget.WindowName(
+                    max_chars=50,
+                ),
+                widget.Chord(
+                    chords_colors={
+                        "launch": ("#ff0000", "#ffffff"),
+                    },
+                    name_transform=lambda name: name.upper(),
+                ),
+                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
+                # widget.StatusNotifier(),
+                widget.Wttr(
+                    location={"Florianopolis": "Floripa"},
+                    format="%l:%c%t %p %w %m",
+                    update_interval=36000,
+                ),
+                widget.Sep(),
+                widget.Mpris2(
+                    format="{xesam_title} - {xesam_artist}",
+                    scroll=True,
+                    scrol_fixed_width=True,
+                ),
+                widget.Volume(),
+                widget.Volume(
+                    emoji=True,
+                ),
+                widget.Sep(),
+                widget.KeyboardLayout(configured_keyboards=["us", "br"]),
+                widget.Sep(),
+                widget.DF(visible_on_warn=False, format="💾 {f}{m}"),
+                widget.Sep(),
+                widget.Memory(
+                    format="🧠 {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
+                    measure_mem="G",
+                ),
+                widget.Sep(),
+                widget.CPU(
+                    format="󰻠 {freq_current}GHz {load_percent}%",
+                ),
+                widget.ThermalSensor(),
+                widget.Sep(),
+                widget.Wlan(
+                    interface="wlan0",
+                    format="{essid} {percent:2.0%}",
+                ),
+                widget.Sep(),
+                widget.BatteryIcon(),
+                widget.Battery(format="{percent:2.0%}"),
+                widget.Sep(),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+            ],
+            22,
+            background="#1e1e2e",
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
