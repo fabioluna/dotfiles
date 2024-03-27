@@ -8,7 +8,7 @@
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
+# in the Software without testriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
@@ -27,7 +27,7 @@ import os
 import subprocess
 
 from libqtile import bar, hook, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, DropDown, Group, Key, KeyChord, Match, Screen, ScratchPad
 from libqtile.lazy import lazy
 
 mod = "mod4"
@@ -64,10 +64,8 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "shift"], "h", lazy.layout.grow_left(),
-        desc="Grow window to the left"),
-    Key([mod, "shift"], "l", lazy.layout.grow_right(),
-        desc="Grow window to the right"),
+    Key([mod, "shift"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "shift"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "shift"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
@@ -94,13 +92,13 @@ keys = [
     Key(
         ["mod1"],
         "space",
-        lazy.spawn(
-            "rofi -combi-modi window,drun -show combi -modi combi -show-icons"),
+        lazy.spawn("rofi -combi-modi window,drun -show combi -modi combi -show-icons"),
     ),
     Key([mod], "e", lazy.spawn("rofimoji")),
     # Edge Browser
-    Key([mod], "w", lazy.spawn(
-        "microsoft-edge-stable --force-device-scale-factor=1.5")),
+    Key(
+        [mod], "w", lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5")
+    ),
     Key([mod, "shift"], "w", lazy.spawn("microsoft-edge-stable --inprivate")),
     # Diodon
     Key([mod], "v", lazy.spawn("diodon")),
@@ -127,10 +125,8 @@ keys = [
     Key([], "XF86AudioStop", lazy.spawn("playerctl play-pause")),
     Key([], "XF86AudioPrev", lazy.spawn("playerctl previous")),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn(
-        "amixer -D pulse sset Master 5%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn(
-        "amixer -D pulse sset Master 5%+")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -D pulse sset Master 5%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -D pulse sset Master 5%+")),
     Key([], "XF86AudioMute", lazy.spawn("amixer -D pulse set Master 1+ toggle")),
     # Change keyboard layout
     Key(
@@ -155,11 +151,38 @@ keys = [
         "a",
         lazy.spawn("arandr"),
     ),
+    Key(
+        [mod],
+        "t",
+        lazy.spawn("thunar"),
+   ),
+    KeyChord([mod], "s", [
+        Key(
+            [],
+            "e",
+            lazy.group["scratchpad"].dropdown_toggle("smile"),
+        ),
+        Key(
+            [],
+            "t",
+            lazy.group["scratchpad"].dropdown_toggle("term"),
+        ),
+    ]),
 ]
 
 groups = [Group(i) for i in "1234567890"]
 
+scratchpad = ScratchPad("scratchpad", [
+    DropDown("term", "kitty", opacity=0.8),
+    DropDown("smile", "smile", opacity=0.8),
+])
+
+groups.append(scratchpad)
+
 for i in groups:
+    if i.name == "scratchpad":
+        continue
+
     keys.extend(
         [
             # mod1 + letter of group = switch to group
@@ -174,8 +197,7 @@ for i in groups:
                 [mod, "shift"],
                 i.name,
                 lazy.window.togroup(i.name, switch_group=True),
-                desc="Switch to & move focused window to group {}".format(
-                    i.name),
+                desc="Switch to & move focused window to group {}".format(i.name),
             ),
             # Or, use below if you prefer not to switch to that group.
             # # mod1 + shift + letter of group = move focused window to group
@@ -268,8 +290,7 @@ screens = [
                 widget.Battery(format="{percent:2.0%}"),
                 widget.Sep(),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p",
-                             timezone="America/Denver"),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p", timezone="America/Denver"),
             ],
             32,
             background="#1e1e2e",
