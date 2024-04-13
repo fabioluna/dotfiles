@@ -27,7 +27,17 @@ import os
 import subprocess
 
 from libqtile import bar, hook, layout, widget
-from libqtile.config import Click, Drag, DropDown, Group, Key, KeyChord, Match, Screen, ScratchPad
+from libqtile.config import (
+    Click,
+    Drag,
+    DropDown,
+    Group,
+    Key,
+    KeyChord,
+    Match,
+    Screen,
+    ScratchPad,
+)
 from libqtile.lazy import lazy
 
 mod = "mod4"
@@ -95,11 +105,6 @@ keys = [
         lazy.spawn("rofi -combi-modi window,drun -show combi -modi combi -show-icons"),
     ),
     Key([mod], "e", lazy.spawn("rofimoji")),
-    # Edge Browser
-    Key(
-        [mod], "w", lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5")
-    ),
-    Key([mod, "shift"], "w", lazy.spawn("microsoft-edge-stable --inprivate")),
     # Diodon
     Key([mod], "v", lazy.spawn("diodon")),
     # Quit qtile
@@ -155,27 +160,75 @@ keys = [
         [mod],
         "t",
         lazy.spawn("thunar"),
-   ),
-    KeyChord([mod], "s", [
-        Key(
-            [],
-            "e",
-            lazy.group["scratchpad"].dropdown_toggle("smile"),
-        ),
-        Key(
-            [],
-            "t",
-            lazy.group["scratchpad"].dropdown_toggle("term"),
-        ),
-    ]),
+    ),
+    Key(
+        [mod],
+        "o",
+        lazy.spawn("obsidian"),
+    ),
+    Key(
+        [mod],
+        "c",
+        lazy.spawn("code"),
+    ),
+    Key(
+        [mod],
+        "b",
+        lazy.spawn("barrier"),
+    ),
+    KeyChord(
+        [mod],
+        "s",
+        [
+            Key(
+                [],
+                "e",
+                lazy.group["scratchpad"].dropdown_toggle("smile"),
+            ),
+            Key(
+                [],
+                "t",
+                lazy.group["scratchpad"].dropdown_toggle("term"),
+            ),
+        ],
+    ),
+    KeyChord(
+        [mod],
+        "w",
+        [
+            # Edge Browser Fabiocluna
+            Key(
+                [mod],
+                "w",
+                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5 --profile-directory='Profile 1'"),
+            ),
+            # Edge Browser Trolinha
+            Key(
+                [mod],
+                "t",
+                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5 --profile-directory='Default'"),
+            ),
+            # Edge Browser Incognito
+            Key(
+                [mod, "shift"],
+                "w",
+                lazy.spawn(
+                    "microsoft-edge-stable --inprivate --force-device-scale-factor=1.5"
+                ),
+            ),
+        ],
+    ),
 ]
 
 groups = [Group(i) for i in "1234567890"]
 
-scratchpad = ScratchPad("scratchpad", [
-    DropDown("term", "kitty", opacity=0.8),
-    DropDown("smile", "smile", opacity=0.8),
-])
+scratchpad = ScratchPad(
+    "scratchpad",
+    [
+        DropDown("term", "kitty", opacity=0.8),
+        DropDown("smile", "smile", opacity=0.8),
+    ],
+)
 
 groups.append(scratchpad)
 
