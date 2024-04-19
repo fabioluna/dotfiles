@@ -200,13 +200,13 @@ keys = [
             Key(
                 [mod],
                 "w",
-                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5 --profile-directory='Profile 1'"),
+                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.75 --profile-directory='Profile 1'"),
             ),
             # Edge Browser Trolinha
             Key(
                 [mod],
                 "t",
-                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.5 --profile-directory='Default'"),
+                lazy.spawn("microsoft-edge-stable --force-device-scale-factor=1.75 --profile-directory='Default'"),
             ),
             # Edge Browser Incognito
             Key(
