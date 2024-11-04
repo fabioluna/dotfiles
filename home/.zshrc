@@ -81,7 +81,7 @@ git
 gitfast
 rust
 ansible
-asdf
+# asdf
 docker
 docker-compose
 jump
@@ -152,7 +152,7 @@ __git_files () {
 export PATH=$PATH:/usr/local/go/bin
 
 # Android
-export ANDROID_HOME=/home/fabio/Android/Sdk
+export ANDROID_HOME=/home/thebalance/Android/Sdk
 #export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 #export PATH=$PATH:$ANDROID_HOME/platform-tools
 
@@ -194,3 +194,9 @@ timezsh() {
 
 # Homesick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# . ~/.asdf/plugins/java/set-java-home.zsh
+
+# MISE
+eval "$(~/.local/bin/mise activate zsh)"
+source "$HOME/.zsh_completions/_mise"
