@@ -99,10 +99,15 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # My keybindings
     # Launch rofi
+    # Key(
+    #     ["mod1"],
+    #     "space",
+    #     lazy.spawn("rofi -combi-modi window,drun -show combi -modi combi -show-icons"),
+    # ),
     Key(
         ["mod1"],
         "space",
-        lazy.spawn("rofi -combi-modi window,drun -show combi -modi combi -show-icons"),
+        lazy.spawn("ulauncher"),
     ),
     Key([mod], "e", lazy.spawn("rofimoji")),
     # Diodon
@@ -266,12 +271,12 @@ layouts = [
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(),
+    # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    layout.TreeTab(),
-    # layout.VerticalTile(),
+    # layout.TreeTab(),
+    layout.VerticalTile(),
     # layout.Zoomy(),
 ]
 
@@ -343,10 +348,11 @@ screens = [
                 widget.Battery(format="{percent:2.0%}"),
                 widget.Sep(),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p", timezone="America/Denver"),
+                widget.Clock(format="%Y-%m-%d %a %I:%M %p", timezone="America/Sao_Paulo"),
             ],
             32,
-            background="#1e1e2e",
+            background="#1a1b26",
+            # background="#1e1e2e",
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
@@ -354,70 +360,80 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Image(
-                    filename="~/Pictures/Icons/Galo.png",
-                    scale="False",
-                ),
                 widget.CurrentLayoutIcon(),
                 widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(
-                    max_chars=50,
-                ),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Wttr(
-                    location={"Florianopolis": "Floripa"},
-                    format="%l:%c%t %p %w %m",
-                    update_interval=36000,
-                ),
-                widget.Sep(),
-                widget.Mpris2(
-                    format="{xesam_title} - {xesam_artist}",
-                    scroll=True,
-                    scrol_fixed_width=True,
-                ),
-                widget.Volume(),
-                widget.Volume(
-                    emoji=True,
-                ),
-                widget.Sep(),
-                widget.KeyboardLayout(configured_keyboards=["us", "br"]),
-                widget.Sep(),
-                widget.DF(visible_on_warn=False, format="💾 {f}{m}"),
-                widget.Sep(),
-                widget.Memory(
-                    format="🧠 {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
-                    measure_mem="G",
-                ),
-                widget.Sep(),
-                widget.CPU(
-                    format="󰻠 {freq_current}GHz {load_percent}%",
-                ),
-                widget.ThermalSensor(),
-                widget.Sep(),
-                widget.Wlan(
-                    interface="wlan0",
-                    format="{essid} {percent:2.0%}",
-                ),
-                widget.Sep(),
-                widget.BatteryIcon(),
-                widget.Battery(format="{percent:2.0%}"),
-                widget.Sep(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
             ],
-            22,
-            background="#1e1e2e",
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            32,
+            background="#1a1b26",
         ),
-    ),
+    )
+    # Screen(
+    #     top=bar.Bar(
+    #         [
+    #             widget.Image(
+    #                 filename="~/Pictures/Icons/Galo.png",
+    #                 scale="False",
+    #             ),
+    #             widget.CurrentLayoutIcon(),
+    #             widget.GroupBox(),
+    #             widget.Prompt(),
+    #             widget.WindowName(
+    #                 max_chars=50,
+    #             ),
+    #             widget.Chord(
+    #                 chords_colors={
+    #                     "launch": ("#ff0000", "#ffffff"),
+    #                 },
+    #                 name_transform=lambda name: name.upper(),
+    #             ),
+    #             # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
+    #             # widget.StatusNotifier(),
+    #             widget.Wttr(
+    #                 location={"Florianopolis": "Floripa"},
+    #                 format="%l:%c%t %p %w %m",
+    #                 update_interval=36000,
+    #             ),
+    #             widget.Sep(),
+    #             widget.Mpris2(
+    #                 format="{xesam_title} - {xesam_artist}",
+    #                 scroll=True,
+    #                 scrol_fixed_width=True,
+    #             ),
+    #             widget.Volume(),
+    #             widget.Volume(
+    #                 emoji=True,
+    #             ),
+    #             widget.Sep(),
+    #             widget.KeyboardLayout(configured_keyboards=["us", "br"]),
+    #             widget.Sep(),
+    #             widget.DF(visible_on_warn=False, format="💾 {f}{m}"),
+    #             widget.Sep(),
+    #             widget.Memory(
+    #                 format="🧠 {MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
+    #                 measure_mem="G",
+    #             ),
+    #             widget.Sep(),
+    #             widget.CPU(
+    #                 format="󰻠 {freq_current}GHz {load_percent}%",
+    #             ),
+    #             widget.ThermalSensor(),
+    #             widget.Sep(),
+    #             widget.Wlan(
+    #                 interface="wlan0",
+    #                 format="{essid} {percent:2.0%}",
+    #             ),
+    #             widget.Sep(),
+    #             widget.BatteryIcon(),
+    #             widget.Battery(format="{percent:2.0%}"),
+    #             widget.Sep(),
+    #             widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+    #         ],
+    #         22,
+    #         background="#1e1e2e",
+    #         # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
+    #         # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+    #     ),
+    # ),
 ]
 
 # Drag floating layouts.
@@ -448,8 +464,9 @@ floating_layout = layout.Floating(
         Match(wm_class="maketag"),  # gitk
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
-        Match(title="pinentry"),  # GPG key password entry
-    ]
+        Match(wm_class="pinentry-gtk-2"),  # GPG key password entry
+    ],
+    border_width=0,
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
