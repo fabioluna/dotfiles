@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+# ───────────────────────────────────────────────────────────────────────
+# ~/.config/sketchybar/sketchybarrc
+# ───────────────────────────────────────────────────────────────────────
+
+CONFIG_DIR="$HOME/.config/sketchybar"
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+
+##### BAR “system” ─────────────────────────────────────────────────────
+# Same pink, 28px tall, slight blur so you can read it
+bar=(
+  # position=top
+  height=28
+  blur_radius=10
+  corner_radius=50
+  topmost=window
+  sticky=on
+  margin=5
+  y_offset=2
+)
+
+sketchybar --bar "${bar[@]}"
+
+##### DEFAULTS ─────────────────────────────────────────────────────────
+# All items inherit these
+default=(
+  icon.font="Hack Nerd Font:Bold:14.0"
+  label.font="Hack Nerd Font:Regular:12.0"
+  icon.padding_right=5
+  icon.padding_left=5
+)
+sketchybar --default "${default[@]}"
+
+##### LEFT ⟨ system & status icons ⟩ ───────────────────────────────────
+sketchybar --add item apple left \
+           --set apple icon= \
+                       label.drawing=off \
+                       click_script="open -a System\ Preferences"
+
+for ws in $(aerospace list-workspaces --all); do
+  sketchybar --add item space.$ws left                               \
+             --set space.$ws  icon="$ws"                             \
+                             display=active \
+                             script="$HOME/.config/sketchybar/plugins/space.sh" \
+                             update_freq=1                           \
+                             click_script="aerospace workspace $ws"
+done
+
+sketchybar --add item sep1 left \
+           --set sep1 icon="|" \
+                      icon.color=0xffffffff \
+                      icon.padding_left=5 \
+                      icon.padding_right=5 \
+                      label.drawing=off
+
+sketchybar --add item front_app left \
+           --set front_app \
+                 script="$PLUGIN_DIR/front_app.sh" \
+                 update_freq=0 \
+                 icon.padding_right=4 \
+                 label.padding_left=2 \
+                 icon.font="sketchybar-app-font" \
+            --subscribe front_app front_app_switched
+
+##### CENTER ─────────────────────────────────────────────────────────────
+sketchybar --add item now_playing center \
+           --set now_playing script="$PLUGIN_DIR/now_playing.sh" \
+                             update_freq=3 \
+                             icon=♪ \
+                             icon.color=0xffffffff \
+                             label.max_chars=50 \
+                             label.color=0xffffffff
+
+#### RIGHT  ──────────────────────────────────────────────────────────────
+sketchybar --add item audio_devices right \
+           --set audio_devices script="$PLUGIN_DIR/audio_devices.sh" \
+                               update_freq=3 \
+                               icon=🎧 \
+                               icon.color=0xffffffff \
+                               label.color=0xffffffff \
+                               click_script="$PLUGIN_DIR/audio_selector.sh"
+
+sketchybar --add item sep2 right \
+           --set sep2 icon="|" \
+                       icon.color=0xffffffff \
+                       icon.padding_left=5 \
+                       icon.padding_right=5 \
+                       label.drawing=off
+
+sketchybar --add item clock right \
+           --set clock update_freq=10 icon= script="$PLUGIN_DIR/clock.sh"
+
+##### FIRE EVERYTHING ONCE ─────────────────────────────────────────────
+sketchybar --update
+

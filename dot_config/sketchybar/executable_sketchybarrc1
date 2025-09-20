@@ -1,0 +1,121 @@
+#!/usr/bin/env bash
+
+# ───────────────────────────────────────────────────────────────────────
+# ~/.config/sketchybar/sketchybarrc
+# ───────────────────────────────────────────────────────────────────────
+
+# explicitly set where “$CONFIG_DIR” lives
+CONFIG_DIR="$HOME/.config/sketchybar"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+##### BAR “system” ─────────────────────────────────────────────────────
+# darker & less blurred so you can actually read it
+sketchybar --bar system                                  \
+           position=top                                 \
+           height=28                                    \
+           blur_radius=10                               \
+           color=0xff191724      # full opacity Rosé Pine base
+
+##### DEFAULTS ────────────────────────────────────────────────────────
+# everything inherits these
+default=(
+  padding_left=6
+  padding_right=12
+  drawing=on
+  icon.font="Hack Nerd Font:Bold:14.0"
+  label.font="Hack Nerd Font:Regular:12.0"
+  icon.color=0xff908caa    # subtle
+  label.color=0xffe0def4   # high-contrast text
+)
+sketchybar --default "${default[@]}"
+
+##### LEFT ⟨ app shortcuts ⟩ ───────────────────────────────────────────
+sketchybar --add item apple    left \
+           --set apple    icon= \
+                            click_script="open -a '/System/Applications/App Store.app'"
+
+sketchybar --add item finder   left \
+           --set finder   icon=󰉓 \
+                            click_script="open -a Finder"
+
+sketchybar --add item calendar left \
+           --set calendar icon= \
+                            label="$(date +'%b %d')" \
+                            update_freq=3600
+
+sketchybar --add item slack    left \
+           --set slack    icon=󰚥 \
+                            click_script="open -a Slack"
+
+sketchybar --add item messages left \
+           --set messages icon=󰈭 \
+                            click_script="open -a Messages"
+
+sketchybar --add item spotify  left \
+           --set spotify  icon= \
+                            click_script="open -a Spotify"
+
+##### CENTER ⟨ now playing ⟩ ──────────────────────────────────────────
+sketchybar --add item now_playing center \
+           --set now_playing script="$PLUGIN_DIR/now_playing.sh" \
+                            update_freq=2
+
+##### RIGHT ⟨ stats & date/time ⟩ ────────────────────────────────────
+# ➔ Bandwidth
+sketchybar --add item net right \
+           --set net    icon=⬇️ \
+                        icon.color=0xffeb6f92  \
+                        script="$PLUGIN_DIR/bandwidth.sh" \
+                        update_freq=1
+
+# ➔ CPU
+sketchybar --add item cpu right \
+           --set cpu    icon= \
+                        icon.color=0xfff6c177 \
+                        script="$PLUGIN_DIR/cpu.sh" \
+                        update_freq=2
+
+# ➔ RAM
+sketchybar --add item mem right \
+           --set mem    icon= \
+                        icon.color=0xffea9a97 \
+                        script="$PLUGIN_DIR/mem.sh" \
+                        update_freq=5
+
+# ➔ Disk
+sketchybar --add item disk right \
+           --set disk   icon= \
+                        icon.color=0xff9ccfd8 \
+                        script="$PLUGIN_DIR/disk.sh" \
+                        update_freq=60
+
+# ➔ Wi-Fi
+sketchybar --add item wifi right \
+           --set wifi   icon= \
+                        icon.color=0xffc4a7e7 \
+                        script="$PLUGIN_DIR/wifi.sh" \
+                        update_freq=10
+
+# ➔ Battery
+sketchybar --add item battery right \
+           --set battery icon=🔋 \
+                         icon.color=0xffebbcba \
+                         script="$PLUGIN_DIR/battery.sh" \
+                         update_freq=30
+
+# ➔ Date
+sketchybar --add item date right \
+           --set date   icon= \
+                        icon.color=0xffe0def4 \
+                        label="$(date +'%a %d.%m.%Y')" \
+                        update_freq=60
+
+# ➔ Time
+sketchybar --add item time right \
+           --set time   icon= \
+                        icon.color=0xffe0def4 \
+                        label="$(date +'%H:%M')" \
+                        update_freq=30
+
+##### RUN ALL SCRIPTS ONCE ─────────────────────────────────────────────
+sketchybar --update
