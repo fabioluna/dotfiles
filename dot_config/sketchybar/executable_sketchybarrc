@@ -98,7 +98,8 @@ sketchybar --add item sep2 right \
                        label.drawing=off
 
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon= script="$PLUGIN_DIR/clock.sh"
+           --set clock script="$PLUGIN_DIR/calendar.sh" click_script="$PLUGIN_DIR/calendar.sh toggle" update_freq=10 \
+           --icon=
 
 ##### FIRE EVERYTHING ONCE ─────────────────────────────────────────────
 sketchybar --update
