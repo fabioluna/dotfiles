@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
-#
-# space.sh — highlight the current AeroSpace workspace
 
-ITEM="$NAME"                    # e.g. "space.3"
-WS="${ITEM#*.}"                 # extract "3"
-FOCUS=$(aerospace list-workspaces --focused)
+ITEM="$NAME"
+WS="${1:-${ITEM#*.}}"
 
-if [ "$WS" = "$FOCUS" ]; then
-  # make the active workspace pop
-  sketchybar --set "$ITEM" background.color=0xffff69b4
+FOCUSED="$(yabai -m query --spaces --space | jq -r 'if (.label != null and .label != "") then .label else (.index|tostring) end')"
+
+if [ "$WS" = "$FOCUSED" ]; then
+  sketchybar --set "$ITEM" background.color=0xffff69b4 icon.color=0xff11111b label.color=0xff11111b
 else
-  # dim the others
-  sketchybar --set "$ITEM" background.color=
+  sketchybar --set "$ITEM" background.color=0x00000000 icon.color=0xffffffff label.color=0xffffffff
 fi

@@ -39,13 +39,19 @@ sketchybar --add item apple left \
                        label.drawing=off \
                        click_script="open -a System\ Preferences"
 
-for ws in $(aerospace list-workspaces --all); do
+workspaces="$(yabai -m query --spaces | jq -r 'sort_by(.index) | .[] | if (.label != null and .label != "") then .label else (.index|tostring) end')"
+
+for ws in $workspaces; do
   sketchybar --add item space.$ws left                               \
              --set space.$ws  icon="$ws"                             \
-                             display=active \
-                             script="$HOME/.config/sketchybar/plugins/space.sh" \
-                             update_freq=1                           \
-                             click_script="aerospace workspace $ws"
+                             display=active                           \
+                             background.drawing=on                    \
+                             background.corner_radius=8               \
+                             background.height=20                     \
+                             script="$HOME/.config/sketchybar/plugins/space.sh $ws" \
+                             update_freq=2                            \
+                             click_script="$HOME/.config/sketchybar/plugins/focus_space.sh $ws" \
+             --subscribe space.$ws space_change display_change
 done
 
 sketchybar --add item sep1 left \
@@ -103,4 +109,3 @@ sketchybar --add item clock right \
 
 ##### FIRE EVERYTHING ONCE ─────────────────────────────────────────────
 sketchybar --update
-

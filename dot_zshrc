@@ -72,21 +72,35 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup
 
 # Homebrew
-export PATH=/opt/homebrew/bin:/$PATH
-
-# Brew
-eval "$(brew shellenv)"
+# Use Homebrew's recommended environment setup (Apple Silicon)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 plugins=(
-docker-compose
-fzf
-git
-gitfast
-jump
-mise
-tmux
-zoxide
+  docker-compose
+  fast-syntax-highlighting
+  fzf
+  git
+  gitfast
+  jump
+  tmux
+  zoxide
+  # Needs to be in this order
+  zsh-autosuggestions
+  fzf-tab
 )
+
+# Enable fzf-tab as completion UI
+zstyle ':completion:*' menu yes select
+
+# Case-insensitive + smarter fuzzy matching
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=*'
+
+# Preview pane (fzf-tab)
+# Use bat when available; fallback to sed.
+zstyle ':fzf-tab:*' fzf-preview 'command -v bat >/dev/null 2>&1 && bat --style=numbers --color=always --line-range :300 -- {} 2>/dev/null || sed -n "1,300p" {} 2>/dev/null'
+
+# Better grouping navigation
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,12 +137,15 @@ fi
 # Starship
 eval "$(starship init zsh)"
 
-# Fastfetch
-fastfetch
+# Fastfetch (avoid running on every tmux pane spawn)
+if [[ -z "${TMUX-}" && -o interactive ]]; then
+  command -v fastfetch >/dev/null 2>&1 && fastfetch
+fi
 
 # Completions
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit
-compinit
+compinit -C
 
 # GPG
 export GPG_TTY=$(tty)
@@ -141,10 +158,14 @@ fi
 # Z
 eval "$(zoxide init zsh)"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/fabioluna/.lmstudio/bin"
+# Local user binaries
+export PATH="$HOME/.local/bin:$PATH"
 
 # source aliases
 source $ZSH_CUSTOM/aliases.zsh
 
 alias run='~/container-dev/scripts/container-manager.sh'
+
+# The fuck
+eval "$(thefuck --alias)"
+

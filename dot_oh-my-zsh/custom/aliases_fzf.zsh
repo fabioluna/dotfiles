@@ -16,7 +16,23 @@ alias fgs='git stash list | fzf | cut -d: -f1 | xargs -r git stash show -p'
 
 # Processes
 alias fps='ps aux | fzf'
-alias fk='kill -9 "$(ps -ef | fzf | awk "{print \$2}")"'
+
+# Safer kill helper:
+# - defaults to SIGTERM (graceful)
+# - use fk9 for SIGKILL if needed
+function fk() {
+  local pid
+  pid="$(ps -ef | fzf | awk "{print \$2}")" || return 1
+  [[ -n "$pid" ]] || return 1
+  kill "$pid"
+}
+
+function fk9() {
+  local pid
+  pid="$(ps -ef | fzf | awk "{print \$2}")" || return 1
+  [[ -n "$pid" ]] || return 1
+  kill -9 "$pid"
+}
 
 # Extras
 alias fp='fzf --preview "bat --style=numbers --color=always {} | head -200"'

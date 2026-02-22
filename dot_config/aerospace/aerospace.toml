@@ -188,5 +188,5 @@ shift-down = ['volume set 0', 'mode main']
 retina = 'retina'
 
 [[on-window-detected]]
-if.app-name-regex-substring = '(Linear|Spotify|Todoist|Stickies|flstudio|Gather|slack|WhatsApp|Telegram|chat|ActivityMonitor|claude)'
-run = ['layout floating']
+if.app-name-regex-substring = '(Linear|Spotify|Todoist|Stickies|flstudio|Gather|slack|WhatsApp|Telegram|chat|ActivityMonitor|claude|Calendar)'
+run = ['move-node-to-workspace retina']
