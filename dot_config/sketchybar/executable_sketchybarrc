@@ -1,30 +1,46 @@
 #!/usr/bin/env bash
 
-# ───────────────────────────────────────────────────────────────────────
-# ~/.config/sketchybar/sketchybarrc
-# ───────────────────────────────────────────────────────────────────────
-
 CONFIG_DIR="$HOME/.config/sketchybar"
-PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-##### BAR “system” ─────────────────────────────────────────────────────
-# Same pink, 28px tall, slight blur so you can read it
-bar=(
-  # position=top
-  height=28
-  blur_radius=10
-  corner_radius=50
-  topmost=window
-  sticky=on
-  margin=5
-  y_offset=2
-  font_smoothing=on
-)
+RETINA_DISPLAY_INDEX="${RETINA_DISPLAY_INDEX:-}"
+EXTERNAL_DISPLAY_INDICES=""
 
-sketchybar --bar "${bar[@]}"
+if command -v yabai >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
+  if [ -z "$RETINA_DISPLAY_INDEX" ] || ! yabai -m query --displays | jq -e --arg idx "$RETINA_DISPLAY_INDEX" '.[] | select((.index|tostring) == $idx)' >/dev/null 2>&1; then
+    resolved_index="$(yabai -m query --displays | jq -r '.[] | select(.id == 1) | .index' | head -n 1)"
+    if [ -n "$resolved_index" ]; then
+      RETINA_DISPLAY_INDEX="$resolved_index"
+    else
+      RETINA_DISPLAY_INDEX=1
+    fi
+  fi
 
-##### DEFAULTS ─────────────────────────────────────────────────────────
-# All items inherit these
+  EXTERNAL_DISPLAY_INDICES="$(yabai -m query --displays 2>/dev/null | jq -r --arg retina "$RETINA_DISPLAY_INDEX" '.[] | select((.index|tostring) != $retina) | .index' | paste -sd, -)"
+else
+  [ -z "$RETINA_DISPLAY_INDEX" ] && RETINA_DISPLAY_INDEX=1
+fi
+
+INDEX_DISPLAY_INDICES="$RETINA_DISPLAY_INDEX"
+if [ -n "$EXTERNAL_DISPLAY_INDICES" ]; then
+  INDEX_DISPLAY_INDICES="$INDEX_DISPLAY_INDICES,$EXTERNAL_DISPLAY_INDICES"
+fi
+
+sketchybar --add event spaces_refresh
+
+sketchybar --bar display=all \
+               height=28 \
+               color=0x00000000 \
+               blur_radius=10 \
+               corner_radius=14 \
+               topmost=window \
+               sticky=on \
+               margin=0 \
+               y_offset=0 \
+               font_smoothing=on \
+               notch_width=220 \
+               notch_display_height=28
+
 default=(
   icon.font="Hack Nerd Font:Bold:14.0"
   label.font="Hack Nerd Font:Regular:12.0"
@@ -33,79 +49,10 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-##### LEFT ⟨ system & status icons ⟩ ───────────────────────────────────
-sketchybar --add item apple left \
-           --set apple icon= \
-                       label.drawing=off \
-                       click_script="open -a System\ Preferences"
-
 workspaces="$(yabai -m query --spaces | jq -r 'sort_by(.index) | .[] | if (.label != null and .label != "") then .label else (.index|tostring) end')"
+workspaces_inline="$(printf '%s' "$workspaces" | tr '\n' ' ')"
 
-for ws in $workspaces; do
-  sketchybar --add item space.$ws left                               \
-             --set space.$ws  icon="$ws"                             \
-                             display=active                           \
-                             background.drawing=on                    \
-                             background.corner_radius=8               \
-                             background.height=20                     \
-                             script="$HOME/.config/sketchybar/plugins/space.sh $ws" \
-                             update_freq=2                            \
-                             click_script="$HOME/.config/sketchybar/plugins/focus_space.sh $ws" \
-             --subscribe space.$ws space_change display_change
-done
+[ -f "$CONFIG_DIR/sketchybarrc.retina" ] && . "$CONFIG_DIR/sketchybarrc.retina"
+[ -f "$CONFIG_DIR/sketchybarrc.external" ] && . "$CONFIG_DIR/sketchybarrc.external"
 
-sketchybar --add item sep1 left \
-           --set sep1 icon="|" \
-                      icon.color=0xffffffff \
-                      icon.padding_left=5 \
-                      icon.padding_right=5 \
-                      label.drawing=off
-
-sketchybar --add item front_app left \
-           --set front_app \
-                 script="$PLUGIN_DIR/front_app.sh" \
-                 update_freq=0 \
-                 icon.padding_right=4 \
-                 label.padding_left=2 \
-                 icon.font="sketchybar-app-font:Regular:14.0" \
-                 icon.y_offset=0 \
-                 drawing=on \
-            --subscribe front_app front_app_switched
-
-##### CENTER ─────────────────────────────────────────────────────────────
-sketchybar --add item now_playing center \
-           --set now_playing script="$PLUGIN_DIR/now_playing.sh" \
-                             update_freq=3 \
-                             background.height=22 \
-                             background.corner_radius=3 \
-                             background.drawing=off \
-                             icon.drawing=on \
-                             icon.font="Hack Nerd Font:Bold:14.0" \
-                             icon.padding_left=2 \
-                             icon.padding_right=8 \
-                             label.max_chars=50 \
-                             label.color=0xffffffff \
-                             label.padding_left=15
-
-#### RIGHT  ──────────────────────────────────────────────────────────────
-sketchybar --add item audio_devices right \
-           --set audio_devices script="$PLUGIN_DIR/audio_devices.sh" \
-                               update_freq=3 \
-                               icon=🎧 \
-                               icon.color=0xffffffff \
-                               label.color=0xffffffff \
-                               click_script="$PLUGIN_DIR/audio_selector.sh"
-
-sketchybar --add item sep2 right \
-           --set sep2 icon="|" \
-                       icon.color=0xffffffff \
-                       icon.padding_left=5 \
-                       icon.padding_right=5 \
-                       label.drawing=off
-
-sketchybar --add item clock right \
-           --set clock script="$PLUGIN_DIR/calendar.sh" click_script="$PLUGIN_DIR/calendar.sh toggle" update_freq=10 \
-           --icon=
-
-##### FIRE EVERYTHING ONCE ─────────────────────────────────────────────
 sketchybar --update

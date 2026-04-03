@@ -1,0 +1,126 @@
+#!/usr/bin/env bash
+
+[ -z "$RETINA_DISPLAY_INDEX" ] && return 0
+
+sketchybar --add item retina.apple left \
+           --set retina.apple icon= \
+                              display="$RETINA_DISPLAY_INDEX" \
+                              label.drawing=off \
+                              click_script="open -a System\ Preferences"
+
+for ws in $workspaces; do
+  sketchybar --add item space.$ws left \
+             --set space.$ws icon="$ws" \
+                             display="$INDEX_DISPLAY_INDICES" \
+                             background.drawing=on \
+                             background.corner_radius=8 \
+                             background.height=20 \
+                             click_script="$PLUGIN_DIR/focus_space.sh $ws"
+done
+
+sketchybar --add item spaces.refresh left \
+           --set spaces.refresh script="$PLUGIN_DIR/spaces_refresh.sh $workspaces_inline" \
+                                drawing=off \
+                                display="$INDEX_DISPLAY_INDICES" \
+           --subscribe spaces.refresh space_change display_change front_app_switched spaces_refresh
+
+sketchybar --add item retina.sep1 left \
+           --set retina.sep1 icon="|" \
+                            display="$RETINA_DISPLAY_INDEX" \
+                            icon.color=0xffffffff \
+                            icon.padding_left=5 \
+                            icon.padding_right=5 \
+                            label.drawing=off
+
+sketchybar --add item retina.front_app left \
+           --set retina.front_app script="$PLUGIN_DIR/front_app.sh" \
+                                 display="$RETINA_DISPLAY_INDEX" \
+                                 update_freq=0 \
+                                 icon.padding_right=4 \
+                                 label.padding_left=2 \
+                                 icon.font="sketchybar-app-font:Regular:14.0" \
+                                 icon.y_offset=0 \
+                                 drawing=on \
+           --subscribe retina.front_app front_app_switched
+
+# sketchybar --add item retina.now_playing left \
+#            --set retina.now_playing script="$PLUGIN_DIR/now_playing.sh" \
+#                                   display="$RETINA_DISPLAY_INDEX" \
+#                                   update_freq=3 \
+#                                   background.height=22 \
+#                                   background.corner_radius=3 \
+#                                   background.drawing=off \
+#                                   icon.drawing=on \
+#                                   icon.font="Hack Nerd Font:Bold:14.0" \
+#                                   icon.padding_left=2 \
+#                                   icon.padding_right=8 \
+#                                   label.max_chars=50 \
+#                                   label.color=0xffffffff \
+#                                   label.padding_left=15
+
+sketchybar --add item retina.audio_devices right \
+           --set retina.audio_devices script="$PLUGIN_DIR/audio_devices.sh" \
+                                     display="$RETINA_DISPLAY_INDEX" \
+                                     update_freq=3 \
+                                     icon=🎧 \
+                                     icon.color=0xffffffff \
+                                     label.color=0xffffffff \
+                                     click_script="$PLUGIN_DIR/audio_selector.sh"
+
+sketchybar --add item retina.sep2 right \
+           --set retina.sep2 icon="|" \
+                            display="$RETINA_DISPLAY_INDEX" \
+                            icon.color=0xffffffff \
+                            icon.padding_left=5 \
+                            icon.padding_right=5 \
+                            label.drawing=off
+
+sketchybar --add item retina.now_playing_right right \
+           --set retina.now_playing_right script="$PLUGIN_DIR/now_playing_right.sh" \
+                                        display="$RETINA_DISPLAY_INDEX" \
+                                        update_freq=2 \
+                                        drawing=off \
+                                        scroll_texts=on \
+                                        label.max_chars=40 \
+                                        label.color=0xffffffff \
+                                        icon.color=0xffffffff \
+                                        icon.padding_left=4 \
+                                        icon.padding_right=6
+
+sketchybar --add item retina.clock right \
+           --set retina.clock script="$PLUGIN_DIR/calendar.sh" \
+                             display="$RETINA_DISPLAY_INDEX" \
+                             click_script="$PLUGIN_DIR/calendar.sh toggle" \
+                             update_freq=10 \
+                             icon=
+
+sketchybar --add item retina.sep3 right \
+           --set retina.sep3 icon="|" \
+                            display="$RETINA_DISPLAY_INDEX" \
+                            icon.color=0xffffffff \
+                            icon.padding_left=5 \
+                            icon.padding_right=5 \
+                            label.drawing=off
+
+sketchybar --add item retina.battery right \
+           --set retina.battery script="$PLUGIN_DIR/battery.sh" \
+                               display="$RETINA_DISPLAY_INDEX" \
+                               update_freq=30 \
+                               icon.color=0xffffffff \
+                               label.color=0xffffffff
+
+sketchybar --add item retina.sep4 right \
+           --set retina.sep4 icon="|" \
+                            display="$RETINA_DISPLAY_INDEX" \
+                            icon.color=0xffffffff \
+                            icon.padding_left=5 \
+                            icon.padding_right=5 \
+                            label.drawing=off
+
+sketchybar --add item retina.weather right \
+           --set retina.weather script="$PLUGIN_DIR/weather.sh" \
+                               display="$RETINA_DISPLAY_INDEX" \
+                               update_freq=180 \
+                               icon.drawing=off \
+                               label="weather..." \
+                               label.color=0xffffffff

@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+[ -z "$EXTERNAL_DISPLAY_INDICES" ] && return 0
+
+sketchybar --add item external.front_app left \
+           --set external.front_app script="$PLUGIN_DIR/front_app.sh" \
+                                    display="$EXTERNAL_DISPLAY_INDICES" \
+                                   update_freq=0 \
+                                   icon.padding_right=4 \
+                                   label.padding_left=2 \
+                                   icon.font="sketchybar-app-font:Regular:14.0" \
+                                   icon.y_offset=0 \
+                                   drawing=on \
+           --subscribe external.front_app front_app_switched
+
+# sketchybar --add item external.now_playing center \
+#            --set external.now_playing script="$PLUGIN_DIR/now_playing.sh" \
+#                                      display="$EXTERNAL_DISPLAY_INDICES" \
+#                                   update_freq=3 \
+#                                   background.height=22 \
+#                                   background.corner_radius=3 \
+#                                   background.drawing=off \
+#                                   icon.drawing=on \
+#                                   icon.font="Hack Nerd Font:Bold:14.0" \
+#                                   icon.padding_left=2 \
+#                                   icon.padding_right=8 \
+#                                   label.max_chars=50 \
+#                                   label.color=0xffffffff \
+#                                   label.padding_left=15
+
+sketchybar --add item external.audio_devices right \
+           --set external.audio_devices script="$PLUGIN_DIR/audio_devices.sh" \
+                                       display="$EXTERNAL_DISPLAY_INDICES" \
+                                       update_freq=3 \
+                                       icon=🎧 \
+                                       icon.color=0xffffffff \
+                                       label.color=0xffffffff \
+                                       click_script="$PLUGIN_DIR/audio_selector.sh"
+
+sketchybar --add item external.sep2 right \
+           --set external.sep2 icon="|" \
+                              display="$EXTERNAL_DISPLAY_INDICES" \
+                              icon.color=0xffffffff \
+                              icon.padding_left=5 \
+                              icon.padding_right=5 \
+                              label.drawing=off
+
+sketchybar --add item external.clock right \
+           --set external.clock script="$PLUGIN_DIR/calendar.sh" \
+                                display="$EXTERNAL_DISPLAY_INDICES" \
+                                click_script="$PLUGIN_DIR/calendar.sh toggle" \
+                                update_freq=10 \
+                                icon=
+
+sketchybar --add item external.sep3 right \
+           --set external.sep3 icon="|" \
+                              display="$EXTERNAL_DISPLAY_INDICES" \
+                              icon.color=0xffffffff \
+                              icon.padding_left=5 \
+                              icon.padding_right=5 \
+                              label.drawing=off
+
+sketchybar --add item external.battery right \
+           --set external.battery script="$PLUGIN_DIR/battery.sh" \
+                                 display="$EXTERNAL_DISPLAY_INDICES" \
+                                 update_freq=30 \
+                                 icon.color=0xffffffff \
+                                 label.color=0xffffffff
+
+sketchybar --add item external.sep4 right \
+           --set external.sep4 icon="|" \
+                              display="$EXTERNAL_DISPLAY_INDICES" \
+                              icon.color=0xffffffff \
+                              icon.padding_left=5 \
+                              icon.padding_right=5 \
+                              label.drawing=off
+
+sketchybar --add item external.weather right \
+           --set external.weather script="$PLUGIN_DIR/weather.sh" \
+                                 display="$EXTERNAL_DISPLAY_INDICES" \
+                                 update_freq=180 \
+                                 icon.drawing=off \
+                                 label="weather..." \
+                                 label.color=0xffffffff
