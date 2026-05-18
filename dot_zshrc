@@ -169,3 +169,10 @@ alias run='~/container-dev/scripts/container-manager.sh'
 # The fuck
 eval "$(thefuck --alias)"
 
+# Television: keep Ctrl-T smart completion here; Atuin below keeps Ctrl-R history.
+if command -v tv >/dev/null 2>&1; then
+  eval "$(tv init zsh)"
+fi
+
+# Atuin
+eval "$(atuin init zsh)"

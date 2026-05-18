@@ -1,4 +1,5 @@
 source /Users/fabioluna/.oh-my-zsh/custom/aliases_fzf.zsh
+[[ -r /Users/fabioluna/.oh-my-zsh/custom/aliases_tv.zsh ]] && source /Users/fabioluna/.oh-my-zsh/custom/aliases_tv.zsh
 
 # Eza
 alias ls='eza -G  --color auto --icons -a -s type'
@@ -35,3 +36,9 @@ alias tonder-dev='kitty +kitten ssh -i ~/.ssh/tonder-dev ubuntu@34.236.234.57'
 
 # Newsboat
 alias nb='newsboat'
+
+# Sesh
+alias ws='sesh connect "$(sesh list | fzf --height 40%)"'
+
+# Atuin
+alias ah='atuin search --interactive'

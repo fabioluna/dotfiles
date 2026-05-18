@@ -57,6 +57,9 @@ alt + shift - 0x29 ; service
 service < escape ; default
 service < shift - escape : yabai --restart-service && skhd --restart-service ; default
 service < t : $HOME/.config/yabai/scripts/toggle-yabai-skhd.sh ; default
+service < w : $HOME/.config/yabai/scripts/tv-picker.sh window ; default
+service < a : $HOME/.config/yabai/scripts/tv-picker.sh app ; default
+service < o : $HOME/.config/yabai/scripts/tv-picker.sh audio ; default
 service < r : yabai -m space --layout bsp && yabai -m space --balance ; default
 service < f : $HOME/.config/yabai/scripts/toggle-space-layout.sh ; default
 service < backspace : $HOME/.config/yabai/scripts/close-all-windows-but-current.sh ; default

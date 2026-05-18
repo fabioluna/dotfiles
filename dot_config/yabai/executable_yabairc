@@ -14,7 +14,7 @@ yabai -m config left_padding 1
 yabai -m config right_padding 1
 
 yabai -m config mouse_follows_focus on
-yabai -m config focus_follows_mouse autoraise
+yabai -m config focus_follows_mouse off
 yabai -m config mouse_modifier alt
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
@@ -24,29 +24,28 @@ if command -v sudo >/dev/null 2>&1; then
 fi
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=display_added action="$HOME/.config/yabai/scripts/init-spaces.sh $RETINA_DISPLAY_INDEX $RETINA_SPACE_LABEL"
-yabai -m signal --add event=display_removed action="$HOME/.config/yabai/scripts/init-spaces.sh $RETINA_DISPLAY_INDEX $RETINA_SPACE_LABEL"
-yabai -m signal --add event=space_changed action="$HOME/.config/yabai/scripts/apply-padding.sh $RETINA_DISPLAY_INDEX"
-yabai -m signal --add event=display_changed action="$HOME/.config/yabai/scripts/apply-padding.sh $RETINA_DISPLAY_INDEX"
+yabai -m signal --add event=display_added action="$HOME/.config/yabai/scripts/init-spaces.sh auto $RETINA_SPACE_LABEL"
+yabai -m signal --add event=display_removed action="$HOME/.config/yabai/scripts/init-spaces.sh auto $RETINA_SPACE_LABEL"
+yabai -m signal --add event=space_changed action="$HOME/.config/yabai/scripts/apply-padding.sh auto"
+yabai -m signal --add event=display_changed action="$HOME/.config/yabai/scripts/apply-padding.sh auto"
+yabai -m signal --add event=display_added action="$HOME/.config/yabai/scripts/sync-sketchybar.sh auto"
+yabai -m signal --add event=display_removed action="$HOME/.config/yabai/scripts/sync-sketchybar.sh auto"
+yabai -m signal --add event=display_added action="$HOME/.config/yabai/scripts/load-rules.sh $RETINA_SPACE_LABEL"
+yabai -m signal --add event=display_removed action="$HOME/.config/yabai/scripts/load-rules.sh $RETINA_SPACE_LABEL"
 
-$HOME/.config/yabai/scripts/init-spaces.sh "$RETINA_DISPLAY_INDEX" "$RETINA_SPACE_LABEL"
-$HOME/.config/yabai/scripts/apply-padding.sh "$RETINA_DISPLAY_INDEX"
+yabai -m signal --add event=space_changed action="sketchybar --trigger spaces_refresh"
+yabai -m signal --add event=display_changed action="sketchybar --trigger spaces_refresh"
+yabai -m signal --add event=window_created action="sketchybar --trigger spaces_refresh"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger spaces_refresh"
+yabai -m signal --add event=window_focused action="sketchybar --trigger spaces_refresh"
+yabai -m signal --add event=window_moved action="sketchybar --trigger spaces_refresh"
 
-RETINA_SPACE_INDEX=11
-if command -v jq >/dev/null 2>&1; then
-  resolved_retina_index="$(yabai -m query --spaces | jq -r --arg label "$RETINA_SPACE_LABEL" '.[] | select(.label == $label) | .index' | head -n 1)"
-  if [ -n "$resolved_retina_index" ]; then
-    RETINA_SPACE_INDEX="$resolved_retina_index"
-  fi
-fi
-
-yabai -m rule --add app="^(Linear|Spotify|Todoist|Stickies|flstudio|Gather|slack|WhatsApp|Telegram|chat|ActivityMonitor|claude|Calendar)$" space="$RETINA_SPACE_INDEX"
-yabai -m rule --add app="^System Settings$" manage=off
+$HOME/.config/yabai/scripts/init-spaces.sh auto "$RETINA_SPACE_LABEL"
+$HOME/.config/yabai/scripts/apply-padding.sh auto
+$HOME/.config/yabai/scripts/load-rules.sh "$RETINA_SPACE_LABEL"
 
 if command -v borders >/dev/null 2>&1; then
   borders active_color=0xffDFC57B inactive_color=0xff494d64 width=5.0 >/dev/null 2>&1 &
 fi
 
-if command -v sketchybar >/dev/null 2>&1; then
-  sketchybar >/dev/null 2>&1 &
-fi
+"$HOME/.config/yabai/scripts/sync-sketchybar.sh" auto
